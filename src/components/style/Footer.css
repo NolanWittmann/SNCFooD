@@ -1,0 +1,42 @@
+.bg-foot{
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(224, 54, 24);
+    margin-top: 3%;
+
+}
+.rightPart-h2, .centerPart-h2{
+    color: white;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+
+.ancrage{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(224, 54, 24);
+    line-height: 50px;
+    text-align: center;
+    font-size: 1.5rem;
+    position: absolute;
+    bottom: 530px;
+    color: white;
+}
+
+.leftPart-h2{
+    color: white;
+    font-size: 2rem;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+.leftPart ul{
+    display: flex;
+    padding: 0px 0px 0px 0px;
+}
+.leftPart-li, .centerPart-li, .rightPart-li{
+    list-style: none;
+    color:white;
+    margin-top: 5%;
+}
+
