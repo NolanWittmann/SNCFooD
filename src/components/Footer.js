@@ -3,22 +3,24 @@ import "./style/Footer.css"
 
 const Footer = () => {
     return (
+
+
         <div className="bg-foot">
-            <p className='ancrage'>🠝</p>
+            <a href='#' className='ancrage'>🠝</a>
             <div className='leftPart'>
                 <h2 className='leftPart-h2'>sncfood</h2>
                 <ul>
-                    <li className='leftPart-li'><img src="../assets/fb.png" alt="" height="50px" /></li>
-                    <li className='leftPart-li'><img src="../assets/insta.png" alt="" height="50px" /></li>
-                    <li className='leftPart-li'><img src="../assets/snap.png" alt="" height="50px" /></li>
-                    <li className='leftPart-li'><img src="../assets/twiter.png" alt="" height="50px" /></li>
+                    <li className='leftPart-li'><a href='#'><img src="../assets/fb.png" alt="" height="50px" /></a></li>
+                    <li className='leftPart-li'><a href='#'><img src="../assets/insta.png" alt="" height="50px" /></a></li>
+                    <li className='leftPart-li'><a href='#'><img src="../assets/snap.png" alt="" height="50px" /></a></li>
+                    <li className='leftPart-li'><a href='#'><img src="../assets/twiter.png" alt="" height="50px" /></a></li>
                 </ul>
 
             </div>
 
             <div className='centerPart'>
 
-                <h2 className='centerPart-h2'>NOS RECETTES</h2>
+                <h2 className='centerPart-h2'>RECETTES</h2>
                 <ul>
                     <li className='centerPart-li'>Blanquette de veaux</li>
                     <li className='centerPart-li'>Quiche Lorraine</li>

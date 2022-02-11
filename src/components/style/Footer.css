@@ -1,42 +1,53 @@
-.bg-foot{
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.bg-foot {
     display: flex;
     justify-content: space-around;
     background-color: rgb(224, 54, 24);
     margin-top: 3%;
-
 }
-.rightPart-h2, .centerPart-h2{
+
+.rightPart-h2, .centerPart-h2 {
     color: white;
     margin-left: 20%;
     margin-top: 15%;
 }
 
-.ancrage{
-    height: 50px;
-    width: 50px;
+.ancrage {
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     background-color: rgb(224, 54, 24);
-    line-height: 50px;
+    line-height: 35px;
     text-align: center;
     font-size: 1.5rem;
     position: absolute;
-    bottom: 530px;
+    bottom: 568px;
     color: white;
+    text-decoration: none;
 }
 
-.leftPart-h2{
+.leftPart-h2 {
     color: white;
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 15%;
     margin-top: 10%;
+    font-family: 'Fredoka One', cursive;
 }
-.leftPart ul{
+
+.leftPart ul {
     display: flex;
     padding: 0px 0px 0px 0px;
 }
-.leftPart-li, .centerPart-li, .rightPart-li{
+
+.leftPart-li, .centerPart-li, .rightPart-li {
     list-style: none;
-    color:white;
+    color: white;
     margin-top: 5%;
 }
 
+@media screen and (max-width: 580px) {
+    .centerPart, .rightPart, .ancrage {
+        display: none;
+    }
+}
