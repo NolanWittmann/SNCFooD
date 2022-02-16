@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    font-family: Outfit, "sans serif";
+}
+
+/* Variable couleur de police */
+:root {
+    --footerColor: rgb(224, 54, 24);
+}
+
+/* Variable couleur de police */
+
+.bg-foot {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--footerColor)
+}
+
+
+.leftPart-li, .centerPart-li, .rightPart-li {
+    list-style: none;
+    color: white;
+    margin-top: 5%;
+}
+
+
+
+/*Partie droite du footer  */
+.leftPart-h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-left: 15%;
+    margin-top: 10%;
+    font-family: 'Fredoka One', cursive;
+}
+
+.leftPart ul {
+    display: flex;
+    padding: 0px 0px 0px 0px;
+}
+
+/*Partie droite du footer  */
+/*Partie central du footer  */
+.centerPart-li a {
+    text-decoration: none;
+    color: white;
+}
+
+.ancre {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(35px/2);
+}
+
+.ancrage {
+    background-color: var(--footerColor);
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/*Partie central du footer  */
+
+/*Partie droite du footer  */
+.rightPart-h2, .centerPart-h2 {
+    color: white;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+
+/*Partie droite du footer  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 580px) {
+    .centerPart, .rightPart {
+        display: none;
+    }
+}
