@@ -1,32 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    font-family: Outfit, "sans serif";
+}
+
+/* Variable couleur de police */
+:root {
+    --footerColor: rgb(224, 54, 24);
+}
+
+/* Variable couleur de police */
 
 .bg-foot {
     display: flex;
     justify-content: space-around;
-    background-color: rgb(224, 54, 24);
-    margin-top: 3%;
+    background-color: var(--footerColor)
 }
 
-.rightPart-h2, .centerPart-h2 {
+
+.leftPart-li, .centerPart-li, .rightPart-li {
+    list-style: none;
     color: white;
-    margin-left: 20%;
-    margin-top: 15%;
+    margin-top: 5%;
 }
 
-.ancrage {
-    height: 35px;
-    width: 35px;
-    border-radius: 50%;
-    background-color: rgb(224, 54, 24);
-    line-height: 35px;
-    text-align: center;
-    font-size: 1.5rem;
-    position: absolute;
-    bottom: 568px;
-    color: white;
-    text-decoration: none;
-}
 
+
+/*Partie droite du footer  */
 .leftPart-h2 {
     color: white;
     font-size: 1.8rem;
@@ -40,14 +40,57 @@
     padding: 0px 0px 0px 0px;
 }
 
-.leftPart-li, .centerPart-li, .rightPart-li {
-    list-style: none;
+/*Partie droite du footer  */
+/*Partie central du footer  */
+.centerPart-li a {
+    text-decoration: none;
     color: white;
-    margin-top: 5%;
 }
 
+.ancre {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(35px/2);
+}
+
+.ancrage {
+    background-color: var(--footerColor);
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/*Partie central du footer  */
+
+/*Partie droite du footer  */
+.rightPart-h2, .centerPart-h2 {
+    color: white;
+    margin-left: 20%;
+    margin-top: 15%;
+}
+
+/*Partie droite du footer  */
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 580px) {
-    .centerPart, .rightPart, .ancrage {
+    .centerPart, .rightPart {
         display: none;
     }
 }
