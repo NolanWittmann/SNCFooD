@@ -1,5 +1,5 @@
 import React from 'react';
-import './Questionnaire.css'
+import '../styles/Questionnaire.css'
 
 const Questionnaire = () => {
 
@@ -11,46 +11,78 @@ const Questionnaire = () => {
             <section className='questionnaire'>
 
                 <div className='name'>
-                    <div>
-                        <p><span>1</span>/5</p>
-                    </div>
-                    <div className='name__input'>
-                        <label className='name__input-label'>Quel est ton prénom ?</label>
-                        <input className='name__input-input' type='text'></input>
+                    <div className='name-div'>
+                        <div>
+                            <p><span className='pSpan'>1</span>/5</p>
+                        </div>
+                        <div className='name__input'>
+                            <label className='name__input-label'>Quel est ton prénom ?</label>
+                            <input className='name__input-input' type='text'></input>
+                        </div>
                     </div>
                 </div>
 
                 <div className='genre'>
-                    <p><span>2</span>/5</p>
-                    <p className='genre__question'>Vous êtes,</p>
-                    <div className='genre__genre'>
-                        <p>Un homme</p>
-                        <p>Une femme</p>
+                    <div className='genre-div'>
+                        <div>
+                            <p><span className='pSpan'>2</span>/5</p>
+                        </div>
+                        <div>
+                            <p className='genre__question'>Vous êtes,</p>
+                        </div>
+                        <div className='genre__genre'>
+                            <p><button className='h'>Un homme</button></p>
+                            <p><button className='f'>Une femme</button></p>
+                        </div>
                     </div>
                 </div>
 
                 <div className='metier'>
-                    <p><span>3</span>/5</p>
-                    <p className='metier__question'>Quel est la situation de votre métier ?</p>
-                    <p>Un métier sédentaire</p>
-                    <p>Un métier de terrain</p>
+                    <div className='metier-div'>
+                        <div>
+                            <p><span className='pSpan'>3</span>/5</p>
+                        </div>
+                        <div>
+                            <p className='metier__question'>Quel est la situation de votre métier ?</p>
+                        </div>
+                        <div className='metier__question-situation'>
+                            <p><button className='sedentaire'>Un métier sédentaire</button></p>
+                            <p><button className='terrain'>Un métier de terrain</button></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='vegetarien'>
-                    <p><span>4</span>/5</p>
-                    <p className='vegetarien__question'>Etes-vous végétarien ?</p>
-                    <p>Oui</p>
-                    <p>Non</p>
+                    <div className='vegetarien-div'>
+                        <div>
+                            <p><span className='pSpan'>4</span>/5</p>
+                        </div>
+                        <div>
+                            <p className='vegetarien__question'>Etes-vous végétarien ?</p>
+                        </div>
+                        <div className='vegetarien__question-reponse'>
+                            <p><button className='vegetarien__question-oui'>Oui</button></p>
+                            <p><button className='vegetarien__question-non'>Non</button></p>
+                        </div>
+                    </div>
                 </div>
 
                 <div className='horaire'>
-                    <p><span>5</span>/5</p>
-                    <p className='horaire__question'>Travaillez-vous en horaires décalés ?</p>
-                    <p>Oui</p>
-                    <p>Non</p>
+                    <div className='horaire-div'>
+                        <div>
+                            <p><span className='pSpan'>5</span>/5</p>
+                        </div>
+                        <div>
+                            <p className='horaire__question'>Travaillez-vous en horaires décalés ?</p>
+                        </div>
+                        <div>
+                            <p><button className='horaire__question-oui'>Oui</button></p>
+                            <p><button className='horaire__question-non'>Non</button></p>
+                        </div>
+                    </div>
                 </div>
-            </section>
-        </div>
+            </section >
+        </div >
     );
 }
 
