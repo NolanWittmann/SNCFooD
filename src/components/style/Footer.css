@@ -26,7 +26,7 @@
 
 
 
-/*Partie droite du footer  */
+/*Partie gauche du footer  */
 .leftPart-h2 {
     color: white;
     font-size: 1.8rem;
@@ -40,7 +40,13 @@
     padding: 0px 0px 0px 0px;
 }
 
-/*Partie droite du footer  */
+.logoFooter{
+    height: 70px;
+    margin-top: 25%;
+    margin-left: 20%;
+}
+
+/*Partie gauche du footer  */
 /*Partie central du footer  */
 .centerPart-li a {
     text-decoration: none;

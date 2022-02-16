@@ -10,7 +10,7 @@ const Footer = () => {
             <div className="bg-foot">
 
                 <div className='leftPart'>
-                    <h2 className='leftPart-h2'>sncfood</h2>
+                    <img className='logoFooter' src="../assets/sncfWhite.png" alt="" />
                     <ul>
                         <li className='leftPart-li'><a href='#'><img src="../assets/fb.png" alt="" height="50px" /></a></li>
                         <li className='leftPart-li'><a href='#'><img src="../assets/insta.png" alt="" height="50px" /></a></li>
