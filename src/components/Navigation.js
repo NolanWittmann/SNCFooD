@@ -1,10 +1,5 @@
 import React, { useState} from 'react';
-<<<<<<< HEAD
 import "./style/Navigation.css";
-=======
-import "./style/Navigation.css"
-
->>>>>>> 44fc6ca5fa09bfcf07f385e43df27ddda864d817
 
 
 
