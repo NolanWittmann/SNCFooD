@@ -4,7 +4,7 @@ import './style/Questionnaire.css'
 const Questionnaire = () => {
 
     return (
-        <div  className='page-questionnaire'>
+        <div id="returnQuest" className='page-questionnaire'>
 
             <h1 className='title'>Commençons les amis :</h1>
 
@@ -75,7 +75,7 @@ const Questionnaire = () => {
                         <div>
                             <p className='horaire__question'>Travaillez-vous en horaires décalés ?</p>
                         </div>
-                        <div id="question">
+                        <div>
                             <p><button className='horaire__question-oui'>Oui</button></p>
                             <p><button className='horaire__question-non'>Non</button></p>
                         </div>
