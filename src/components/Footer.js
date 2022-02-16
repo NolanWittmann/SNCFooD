@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div>
             <div className='ancre'>
-                <a href='#ok' className='ancrage'>🠝</a>
+                <a href='#returnHome' className='ancrage'>🠝</a>
             </div>
             <div className="bg-foot">
 
