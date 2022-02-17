@@ -1,6 +1,6 @@
 import React from 'react';
-import "/style/Logo.css";
-import { ReactComponent as Logofood } from '/svg/sncfood_v2.svg';
+import "../style/Logo.css";
+import { ReactComponent as Logofood } from '../svg/Sncfood_v2.svg';
 
 const Logo = () => {
     return (
