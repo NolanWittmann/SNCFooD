@@ -1,11 +1,11 @@
 import React from 'react';
-import "./style/Footer.css"
+import "../style/Footer.css"
 
 const Footer = () => {
     return (
         <div>
             <div className='ancre'>
-                <a href='#ok' className='ancrage'>🠝</a>
+                <a href='#returnHome' className='ancrage'>🠝</a>
             </div>
             <div className="bg-foot">
 

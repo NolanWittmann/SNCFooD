@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+:root {
+    --colorQuest: rgba(255, 255, 255, 0.322);
+}
+
+*{
+    font-family: Outfit, 'sans sérif' ;
+}
+
+/*titre de la page*/
+.title {
+    color: white;
+    font-family: Outfit, 'sans sérif';
+    font-size: 5em;
+    margin: 160px 0px;
+    margin-left: 3%;
+}
+
+
+/*questionnaire de la page*/
+.questionnaire{
+    display: flex;
+    flex-direction: column;
+    font-size: 3em;
+    color: white;
+}
+
+
+/* style numéro des questions*/
+.pSpan{
+    font-weight: bold;
+}
+
+
+/*question 1 name*/
+.name{
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
+    margin: 50px 20px;
+    padding: 20px;
+    height: 600px;
+    background-color: var(--colorQuest);
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.name-div{
+    margin-right: 22%;
+}
+
+.name__input-label{
+    display: block;
+    margin-bottom: 20%;
+    width: 500px;
+}
+
+.name__input-input {
+    border: none;
+    outline: 1px solid rgba(95, 95, 95, 0);
+    height: 100px;
+    width: 400px;
+    font-size: 1em;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.623);
+}
+
+
+
+/*question 2 genre*/
+.genre{
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
+    margin: 50px 20px;
+    padding: 20px;
+    height: 600px;
+    background-color: var(--colorQuest);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.genre-div{
+    margin-left: 10%;
+    width: 100%;
+}
+
+.genre__genre{
+    margin-bottom: 20%;
+    width: 100%;
+    display: block;
+}
+
+.h, .f{
+    border: none;
+    width: 30%;
+    height: 90px;
+    border-radius: 1em;
+    font-size: 0.5em;
+}
+
+
+
+/*question 3 métier*/
+.metier{
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
+    margin: 50px 20px;
+    padding: 20px;
+    height: 600px;
+    background-color: var(--colorQuest);
+    border-radius: 12px;
+    display: flex;
+}
+
+.metier-div{
+    margin-left: 50%;
+    width: 100%;
+}
+
+
+
+.sedentaire, .terrain{
+    border: none;
+    width: 55%;
+    height: 90px;
+    border-radius: 1em;
+    font-size: 0.5em;
+}
+
+
+/*question 4 vegetarien*/
+.vegetarien{
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
+    margin: 50px 20px;
+    padding: 20px;
+    height: 600px;
+    background-color: var(--colorQuest);
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.vegetarien-div{
+    margin-left: 10%;
+    width: 100%;
+}
+
+.vegetarien__question-oui, .vegetarien__question-non{
+    border: none;
+    width: 30%;
+    height: 90px;
+    border-radius: 1em;
+    font-size: 0.5em;
+}
+
+
+
+/*question 5 horaire*/
+.horaire{
+    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
+    margin: 50px 20px;
+    padding: 20px;
+    height: 600px;
+    background-color: var(--colorQuest);
+    border-radius: 12px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.horaire-div{
+    margin-left: 50%;
+    width: 100%;
+}
+
+.horaire__question-oui, .horaire__question-non{
+    border: none;
+    width: 55%;
+    height: 90px;
+    border-radius: 1em;
+    font-size: 0.5em;
+}
+
+
+@media all and (max-width: 1000px)  {
+    .title {
+        font-size: 8em;
+    }
+    .metier__question-situation p{
+        margin: 20px;
+    }
+}
+
+@media all and (max-width: 850px)  {
+    .title {
+        font-size: 5em;
+    }
+    .questionnaire{
+        display: flex;
+        flex-direction: column;
+        font-size: 2.5em;
+    }
+    .name, .genre, .metier, .vegetarien, .horaire{
+        display: block;
+        justify-content: center;
+        margin: 20px 10px;
+    }
+    .name-div, .genre-div, .metier-div, .vegetarien-div, .horaire-div{
+        margin: 0;
+        text-align: center;
+    }
+    .name__input-label{
+        width: 320px;
+        text-align: center;
+        margin: 40px auto;
+    }
+    .name__input-input {
+        height: 100px;
+        width: 300px;
+        font-size: 1em;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.623);
+    }
+    .h, .f, .sedentaire, .terrain, .vegetarien__question-oui, .vegetarien__question-non, .horaire__question-oui, .horaire__question-non{
+        width: 300px;
+    }
+}
+
+@media all and (max-width: 500px)  {
+    .title {
+        font-size: 3em;
+    }
+    .questionnaire{
+        font-size: 2em;
+    }
+    .name, .genre, .metier, .vegetarien, .horaire{
+        display: block;
+        justify-content: center;
+        margin: 20px 10px;
+    }
+}
