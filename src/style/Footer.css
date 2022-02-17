@@ -7,6 +7,7 @@
 /* Variable couleur de police */
 :root {
     --footerColor: rgba(224, 54, 24, 0.377);
+    --logoColor: rgb(255, 255, 255);
 }
 
 /* Variable couleur de police */
@@ -24,27 +25,21 @@
     margin-top: 5%;
 }
 
-
-
 /*Partie droite du footer  */
-.leftPart-h2 {
+.rightPart-h2, .centerPart-h2 {
     color: white;
-    font-size: 1.8rem;
-    margin-left: 15%;
-    margin-top: 10%;
-    font-family: 'Fredoka One', cursive;
+
+    margin-top: 15%;
 }
 
-.leftPart ul {
-    display: flex;
-    padding: 0px 0px 0px 0px;
-}
 
 /*Partie droite du footer  */
+
 /*Partie central du footer  */
-.centerPart-li a {
+.centerPart-li a, .rightPart-li a {
     text-decoration: none;
     color: white;
+    margin-right: 50Px;
 }
 
 .ancre {
@@ -68,29 +63,71 @@
 
 /*Partie central du footer  */
 
-/*Partie droite du footer  */
-.rightPart-h2, .centerPart-h2 {
-    color: white;
-    margin-left: 20%;
-    margin-top: 15%;
+
+
+
+/* Partie gauche du footer */
+.leftPart ul {
+    display: flex;
+    padding: 0px 0px 0px 0px;
 }
 
-/*Partie droite du footer  */
+.leftPart-li a{
+    height: 100px;
+}
 
+.logoFooter {
+    margin-top: 20%;
+}
 
+.logo_sncfood_main {
+    width: 60%;
+}
 
+.logo_sncfood_s {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_n {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_c {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_f {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_o2 {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_o1 {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_d {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_elipse_right {
+    fill: var(--logoColor);
+}
 
+.logo_sncfood_plate {
+    fill: var(--logoColor);
+}
 
+/*Partie gauche du footer  */
 
 @media screen and (max-width: 580px) {
     .centerPart, .rightPart {
         display: none;
+    }
+    .logo_sncfood_main{
+        width: 100%;
+        margin: auto auto;
     }
 }
