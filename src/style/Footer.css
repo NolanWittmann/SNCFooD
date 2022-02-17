@@ -6,7 +6,7 @@
 
 /* Variable couleur de police */
 :root {
-    --footerColor: rgb(224, 54, 24);
+    --footerColor: rgba(224, 54, 24, 0.377);
 }
 
 /* Variable couleur de police */
