@@ -30,6 +30,7 @@
 /* style numéro des questions*/
 .pSpan{
     font-weight: bold;
+    color: rgb(179, 23, 82);
 }
 
 
@@ -38,7 +39,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
     margin: 50px 20px;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     background-color: var(--colorQuest);
     border-radius: 12px;
     display: flex;
@@ -62,7 +63,8 @@
     width: 400px;
     font-size: 1em;
     border-radius: 12px;
-    background-color: rgba(255, 255, 255, 0.623);
+    padding-left: 20px;
+    color: black;
 }
 
 
@@ -72,7 +74,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
     margin: 50px 20px;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     background-color: var(--colorQuest);
     border-radius: 10px;
     display: flex;
@@ -90,7 +92,11 @@
     display: block;
 }
 
-.h, .f{
+.genre__genre p{
+    margin: 20px 0;
+}
+
+.genre__genre-homme, .genre__genre-femme{
     border: none;
     width: 30%;
     height: 90px;
@@ -105,7 +111,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
     margin: 50px 20px;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     background-color: var(--colorQuest);
     border-radius: 12px;
     display: flex;
@@ -116,9 +122,11 @@
     width: 100%;
 }
 
+.metier__question-situation p{
+    margin: 20px 0;
+}
 
-
-.sedentaire, .terrain{
+.metier__question-sedentaire, .metier__question-terrain{
     border: none;
     width: 55%;
     height: 90px;
@@ -132,7 +140,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
     margin: 50px 20px;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     background-color: var(--colorQuest);
     border-radius: 12px;
     display: flex;
@@ -152,6 +160,9 @@
     font-size: 0.5em;
 }
 
+.vegetarien__question-reponse p{
+    margin: 20px 0;
+}
 
 
 /*question 5 horaire*/
@@ -159,7 +170,7 @@
     box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
     margin: 50px 20px;
     padding: 20px;
-    height: 600px;
+    height: 500px;
     background-color: var(--colorQuest);
     border-radius: 12px;
     display: flex;
@@ -169,6 +180,10 @@
 .horaire-div{
     margin-left: 50%;
     width: 100%;
+}
+
+.horaire__question-reponse p{
+    margin: 20px 0;
 }
 
 .horaire__question-oui, .horaire__question-non{
@@ -182,55 +197,50 @@
 
 @media all and (max-width: 1000px)  {
     .title {
-        font-size: 8em;
-    }
-    .metier__question-situation p{
-        margin: 20px;
+        font-size: 5em;
     }
 }
 
 @media all and (max-width: 850px)  {
-    .title {
-        font-size: 5em;
-    }
     .questionnaire{
         display: flex;
         flex-direction: column;
         font-size: 2.5em;
     }
+
     .name, .genre, .metier, .vegetarien, .horaire{
         display: block;
         justify-content: center;
         margin: 20px 10px;
     }
+
     .name-div, .genre-div, .metier-div, .vegetarien-div, .horaire-div{
         margin: 0;
         text-align: center;
     }
+
     .name__input-label{
-        width: 320px;
+        width:100%;
         text-align: center;
-        margin: 40px auto;
     }
     .name__input-input {
-        height: 100px;
-        width: 300px;
-        font-size: 1em;
-        border-radius: 12px;
-        background-color: rgba(255, 255, 255, 0.623);
+        width: 90%;
+
     }
-    .h, .f, .sedentaire, .terrain, .vegetarien__question-oui, .vegetarien__question-non, .horaire__question-oui, .horaire__question-non{
-        width: 300px;
+    .genre__genre-homme, .genre__genre-femme, .metier__question-sedentaire, .metier__question-terrain, .vegetarien__question-oui, .vegetarien__question-non, .horaire__question-oui, .horaire__question-non{
+        width: 90%;
     }
 }
 
 @media all and (max-width: 500px)  {
     .title {
-        font-size: 3em;
+        font-size: 2em;
     }
+
     .questionnaire{
         font-size: 2em;
     }
+
     .name, .genre, .metier, .vegetarien, .horaire{
         display: block;
         justify-content: center;

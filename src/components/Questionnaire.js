@@ -31,8 +31,8 @@ const Questionnaire = () => {
                             <p className='genre__question'>Vous êtes,</p>
                         </div>
                         <div className='genre__genre'>
-                            <p><button className='h'>Un homme</button></p>
-                            <p><button className='f'>Une femme</button></p>
+                            <p><button className='genre__genre-homme'>Un homme</button></p>
+                            <p><button className='genre__genre-femme'>Une femme</button></p>
                         </div>
                     </div>
                 </div>
@@ -46,8 +46,8 @@ const Questionnaire = () => {
                             <p className='metier__question'>Quel est la situation de votre métier ?</p>
                         </div>
                         <div className='metier__question-situation'>
-                            <p><button className='sedentaire'>Un métier sédentaire</button></p>
-                            <p><button className='terrain'>Un métier de terrain</button></p>
+                            <p><button className='metier__question-sedentaire'>Un métier sédentaire</button></p>
+                            <p><button className='metier__question-terrain'>Un métier de terrain</button></p>
                         </div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const Questionnaire = () => {
                         <div>
                             <p className='horaire__question'>Travaillez-vous en horaires décalés ?</p>
                         </div>
-                        <div>
+                        <div className='horaire__question-reponse'>
                             <p><button className='horaire__question-oui'>Oui</button></p>
                             <p><button className='horaire__question-non'>Non</button></p>
                         </div>
