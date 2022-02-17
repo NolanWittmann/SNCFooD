@@ -2,8 +2,6 @@ import React, { useState} from 'react';
 import "../style/Navigation.css";
 
 
-
-
 const Navigation = () => {
 
     const [menuBurger, setMenuBurger] = useState(false)
