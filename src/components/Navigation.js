@@ -1,5 +1,5 @@
 import React, { useState} from 'react';
-import "./style/Navigation.css";
+import "../style/Navigation.css";
 
 
 

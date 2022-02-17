@@ -1,5 +1,5 @@
 import React from 'react';
-import './style/Questionnaire.css'
+import '../style/Questionnaire.css'
 
 const Questionnaire = () => {
 
