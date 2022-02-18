@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../style/Footer.css"
 import { ReactComponent as Logofood } from '../svg/Sncfood_v2.svg';
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 
 const Footer = () => {
+   
 
-    const reseau = [ "./assets/insta.png", "./assets/snap.png", "./assets/twitter.png"]
+    const reseau = ["./assets/insta.png", "./assets/snap.png", "./assets/twitter.png"]
 
     const recettes = ["Blanquette de veau", "Quiche Lorraine", "Gateau au Yaourt", "Gratin Dauphinois",
         "Gateau au Chocolat",
@@ -24,18 +27,22 @@ const Footer = () => {
         "Recettes Végétariennes",
         "Recettes sans Porc"]
 
+        useEffect(()=>{
+            Aos.init({duration: 2000})
+        },[])
+
     return (
-        <div>
-            <div className='ancre'>
+        <div >
+            <div data-aos="fade-up" className='ancre'>
                 <a href='#returnHome' className='ancrage'>🠝</a>
             </div>
-            <div className="bg-foot">
+            <div data-aos="fade-up" className="bg-foot">
 
                 <div className='leftPart'>
                     <p className='logoFooter'><Logofood /></p>
                     <ul>
                         {reseau.map(logo =>
-                            <li className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px"/></a></li>)}
+                            <li className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}
                     </ul>
 
                 </div>

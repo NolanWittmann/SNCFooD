@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../style/Questionnaire.css'
+import Aos from 'aos';
+import "aos/dist/aos.css"
 
 const Questionnaire = () => {
+    useEffect(()=>{
+        Aos.init({duration: 2000})
+    },[])
 
     return (
         <div id="returnQuest" className='page-questionnaire'>
@@ -10,7 +15,7 @@ const Questionnaire = () => {
 
             <section className='questionnaire'>
 
-                <div className='name'>
+                <div  data-aos="fade-left" className='name'>
                     <div className='name-div'>
                         <div>
                             <p><span className='pSpan'>1</span>/5</p>
@@ -22,7 +27,7 @@ const Questionnaire = () => {
                     </div>
                 </div>
 
-                <div className='genre'>
+                <div data-aos="fade-right" className='genre'>
                     <div className='genre-div'>
                         <div>
                             <p><span className='pSpan'>2</span>/5</p>
@@ -37,7 +42,7 @@ const Questionnaire = () => {
                     </div>
                 </div>
 
-                <div className='metier'>
+                <div  data-aos="fade-left" className='metier'>
                     <div className='metier-div'>
                         <div>
                             <p><span className='pSpan'>3</span>/5</p>
@@ -52,7 +57,7 @@ const Questionnaire = () => {
                     </div>
                 </div>
 
-                <div className='vegetarien'>
+                <div data-aos="fade-right" className='vegetarien'>
                     <div className='vegetarien-div'>
                         <div>
                             <p><span className='pSpan'>4</span>/5</p>
@@ -67,7 +72,7 @@ const Questionnaire = () => {
                     </div>
                 </div>
 
-                <div className='horaire'>
+                <div  data-aos="fade-left" className='horaire'>
                     <div className='horaire-div'>
                         <div>
                             <p><span className='pSpan'>5</span>/5</p>

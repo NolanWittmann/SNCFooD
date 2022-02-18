@@ -22,13 +22,13 @@
 .leftPart-li, .centerPart-li, .rightPart-li {
     list-style: none;
     color: white;
-    margin-top: 5%;
+    margin: 5% auto auto auto;
+    
 }
 
 /*Partie droite du footer  */
 .rightPart-h2, .centerPart-h2 {
     color: white;
-
     margin-top: 15%;
 }
 
@@ -77,11 +77,12 @@
 }
 
 .logoFooter {
-    margin-top: 20%;
+    margin: 20% auto auto 16%;
+    
 }
 
 .logo_sncfood_main {
-    width: 60%;
+    width: 80%;
 }
 
 .logo_sncfood_s {
@@ -127,7 +128,10 @@
         display: none;
     }
     .logo_sncfood_main{
-        width: 100%;
-        margin: auto auto;
+        width: 80%;
+        margin: auto;
+    }
+    .leftPart-li{
+        margin: auto;
     }
 }
