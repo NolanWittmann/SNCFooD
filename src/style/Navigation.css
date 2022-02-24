@@ -9,7 +9,12 @@ nav {
     height: 120px;
 }
 
+
 /* Grand ecran */
+.liste__big__screen__logo {
+    display: flex;
+    justify-content: space-between;
+}
 
 .liste__big__screen {
     list-style-type: none;
@@ -110,6 +115,7 @@ nav {
         cursor: url('data:image/x-icon;base64,AAACAAEAICACAAAAAAAwAQAAFgAAACgAAAAgAAAAQAAAAAEAAQAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAA3tzZAAAAAAAAAAAQAAAAOAAAAHwAAAD+AAAB/AAAA/gABAfwAA8P4AAf38AAP/+AAH//AAD//gABx/wAA4P+AAcD/gAOA/8AHAf/ADgOP4BwHB8AYDgeAABwHAAA4DgAAcBwAAOA4AADAcAAAAOAAAAHAAAADgAAABwAAAAYAAAAAAAA////x////4P///8B///+AP///AD///gA//HwAf/gYAP/wAAH/4AAD/8AAB/+AAA//AAAf/gAAP/wEAD/4DgAf8BwAH+A4AA/AcAAPwOAgD8HAcB/DgOA//wHAf/4DgP/+BwH//g4D//4cB//f+A//z/Af/8/wP//D8H//wfD//8='),
             auto;
     }
+
     .liste__li {
         display: none;
     }

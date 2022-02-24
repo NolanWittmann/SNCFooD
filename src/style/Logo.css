@@ -1,0 +1,33 @@
+.logo_header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 3rem;
+}
+.logo_sncfood_s {
+    fill: white;
+}
+.logo_sncfood_n {
+    fill: white;
+}
+.logo_sncfood_c {
+    fill: white;
+}
+.logo_sncfood_f {
+    fill: white;
+}
+.logo_sncfood_o1 {
+    fill: white;
+}
+.logo_sncfood_o2 {
+    fill: white;
+}
+.logo_sncfood_d {
+    fill: white;
+}
+.logo_sncfood_elipse_right {
+    fill: white;
+}
+.logo_sncfood_plate {
+    fill: white;
+}
