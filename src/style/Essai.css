@@ -5,14 +5,19 @@
 }
 
 :root {
-    --colorQuest: rgba(255, 255, 255, 0.322);
+    --colorQuest: rgba(221, 221, 221, 0.432);
 }
 
 
+.questionTitle {
+    margin-top: 33%;
+    margin-left: 10%;
+    font-size: 4rem;
+}
 
 .grosseDiv {
     height: 330vh;
-    background-color: red;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,61 +26,63 @@
 
 
 .partLeft {
-    background-color: green;
     height: 45%;
     width: 90%;
     border-radius: 1rem;
+    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
     margin-bottom: 1%;
-    display : flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
 }
 
 .partRight {
-    background-color: purple;
+    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
     height: 45%;
     width: 90%;
     border-radius: 1rem;
     margin-bottom: 1%;
-    display : flex;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
 }
 
 .btnLeft {
-    background-color: brown;
+
     width: 30%;
-    margin-left: 5%;
+    margin-left: 10%;
     border-radius: 1rem;
     margin-bottom: 1%;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    color : rgb(224, 54, 24);
 }
 
 .btnRight {
-    background-color: yellow;
+    color : #EF444A;
     width: 30%;
-    margin-left: 5%;
+    margin-left: 10%;
     border-radius: 1rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
 }
 
 .questionLeft {
-    background-color: blue;
+
     width: 85%;
-   margin-right: 10%;
+    margin-right: 10%;
     text-align: right;
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .questionRight {
-    background-color: cyan;
-    width: 30%;
+
+    width: 85%;
     margin-left: 5%;
-    text-align: center;
+    text-align: left;
+    font-size: 3rem;
 }
 
-.partLeft .btnLeft, .btnRight{
-    margin-right: 5%;
+.partLeft .btnLeft, .btnRight {
+    margin-right: 10%;
 }

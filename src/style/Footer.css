@@ -6,7 +6,7 @@
 
 /* Variable couleur de police */
 :root {
-    --footerColor: rgba(224, 54, 24, 0.377);
+    --footerColor: rgba(224, 54, 24);
     --logoColor: rgb(255, 255, 255);
 }
 
@@ -76,49 +76,9 @@
     height: 100px;
 }
 
-.logoFooter {
-    margin: 20% auto auto 16%;
-    
-}
-
-.logo_sncfood_main {
-    width: 80%;
-}
-
-.logo_sncfood_s {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_n {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_c {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_f {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_o2 {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_o1 {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_d {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_elipse_right {
-    fill: var(--logoColor);
-}
-
-.logo_sncfood_plate {
-    fill: var(--logoColor);
+.logoFooter{
+    height: 130px;
+    margin-top: 15%;
 }
 
 /*Partie gauche du footer  */

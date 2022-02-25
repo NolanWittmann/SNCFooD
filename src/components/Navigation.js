@@ -20,7 +20,7 @@ const Navigation = () => {
                 </ul>}
             {/* ATTENTION GRAND ECRAN */}
             <div className='liste__big__screen__logo' >
-               
+               <Logo />
                 <ul className='liste__big__screen'>
                     <li className='liste__li__big'><a href="">Comment Faire ?</a></li>
                     <li className='liste__li__big'><a href="#returnQuest">Questionnaire  </a></li>

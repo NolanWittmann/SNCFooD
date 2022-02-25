@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import "../style/Footer.css"
-import { ReactComponent as Logofood } from '../svg/Sncfood_v2.svg';
 import Aos from 'aos';
 import "aos/dist/aos.css"
+
 
 
 const Footer = () => {
@@ -33,13 +33,13 @@ const Footer = () => {
 
     return (
         <div >
-            <div data-aos="fade-up" className='ancre'>
+            <div  className='ancre'>
                 <a href='#returnHome' className='ancrage'>🠝</a>
             </div>
-            <div data-aos="fade-up" className="bg-foot">
+            <div  className="bg-foot">
 
                 <div className='leftPart'>
-                    <p className='logoFooter'><Logofood /></p>
+                    <img className='logoFooter' src="./assets/logoBlanc.png" alt="" />
                     <ul>
                         {reseau.map(logo =>
                             <li className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}

@@ -12,6 +12,7 @@ nav {
 
 /* Grand ecran */
 .liste__big__screen__logo {
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
 }
@@ -36,7 +37,7 @@ nav {
 
 .liste__li__big a {
     text-decoration: none;
-    color: rgb(255, 250, 250);
+    color: rgb(224, 54, 24);
     font-weight: bold;
     font-family: Outfit, 'sans-serif';
 }
