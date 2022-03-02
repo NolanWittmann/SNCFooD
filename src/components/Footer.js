@@ -1,53 +1,66 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import "../style/Footer.css"
+import Aos from 'aos';
+import "aos/dist/aos.css"
+
+
 
 const Footer = () => {
+   
+
+    const reseau = ["./assets/insta.png", "./assets/snap.png", "./assets/twitter.png"]
+
+    const recettes = ["Blanquette de veau", "Quiche Lorraine", "Gateau au Yaourt", "Gratin Dauphinois",
+        "Gateau au Chocolat",
+        "Tiramisu",
+        "Pate a Crepe",
+        "Boeuf Bourguignon",
+        "Tarte aux Pommes",
+        "Mousse au Chocolat",
+        "Pain Perdu",
+        "Poulet Basquaise",
+        "Tomates Farcies",
+        "Pot au Feu"]
+
+    const categories = ["Recettes sans Gluten",
+        "Recettes Vegan",
+        "Recettes Végétariennes",
+        "Recettes sans Porc"]
+
+        useEffect(()=>{
+            Aos.init({duration: 2000})
+        },[])
+
     return (
-        <div>
-            <div className='ancre'>
+        <div >
+            <div  className='ancre'>
                 <a href='#returnHome' className='ancrage'>🠝</a>
             </div>
-            <div className="bg-foot">
+            <div  className="bg-foot">
 
                 <div className='leftPart'>
-                    <h2 className='leftPart-h2'>sncfood</h2>
+                    <img className='logoFooter' src="./assets/logoBlanc.png" alt="" />
                     <ul>
-                        <li className='leftPart-li'><a href='#'><img src="../assets/fb.png" alt="" height="50px" /></a></li>
-                        <li className='leftPart-li'><a href='#'><img src="../assets/insta.png" alt="" height="50px" /></a></li>
-                        <li className='leftPart-li'><a href='#'><img src="../assets/snap.png" alt="" height="50px" /></a></li>
-                        <li className='leftPart-li'><a href='#'><img src="../assets/twiter.png" alt="" height="50px" /></a></li>
+                        {reseau.map((logo, index) =>
+                            <li key={index} className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}
                     </ul>
 
                 </div>
 
                 <div className='centerPart'>
-
-                    <h2 className='centerPart-h2'>RECETTES</h2>
                     <ul>
-                        <li className='centerPart-li'><a href="#">Blanquette de veau</a> </li>
-                        <li className='centerPart-li'><a href="#">Quiche Lorraine</a></li>
-                        <li className='centerPart-li'><a href="#">Gateau au Yaourt</a></li>
-                        <li className='centerPart-li'><a href="#">Gratin Dauphinois</a></li>
-                        <li className='centerPart-li'><a href="#">Gateau au Chocolat</a></li>
-                        <li className='centerPart-li'><a href="#">Tiramisu</a></li>
-                        <li className='centerPart-li'><a href="#">Pate a Crepe</a></li>
-                        <li className='centerPart-li'><a href="#">Boeuf Bourguignon</a></li>
-                        <li className='centerPart-li'><a href="#">Tarte aux Pommes</a></li>
-                        <li className='centerPart-li'><a href="#">Mousse au Chocolat</a></li>
-                        <li className='centerPart-li'><a href="#">Pain Perdu</a></li>
-                        <li className='centerPart-li'><a href="#">Poulet Basquaise</a></li>
-                        <li className='centerPart-li'><a href="#">Tomates Farcies</a></li>
-                        <li className='centerPart-li'><a href="#">Pot au Feu</a></li>
+                        <h2 className='centerPart-h2'>RECETTES</h2>
+                        {recettes.map((recette, index) =>
+                            <li key={index} className='centerPart-li'><a href="">{recette}</a></li>
+                        )}
                     </ul>
                 </div>
 
                 <div className="rightPart">
-                    <h2 className='rightPart-h2'>CATEGORIES</h2>
                     <ul>
-                        <li className='rightPart-li'>Recettes sans Gluten</li>
-                        <li className='rightPart-li'>Recettes Vegan</li>
-                        <li className='rightPart-li'>Recettes Végétariennes</li>
-                        <li className='rightPart-li'>Recettes sans Porc</li>
+                        <h2 className='rightPart-h2'>CATEGORIES</h2>
+                        {categories.map((categorie, index) =>
+                            <li key={index} className='rightPart-li'><a href="#">{categorie}</a></li>)}
                     </ul>
                 </div>
 

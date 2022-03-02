@@ -8,6 +8,8 @@
     font-family: Outfit, 'sans sérif' ;
 }
 
+
+
 /*titre de la page*/
 .title {
     color: white;
@@ -15,6 +17,7 @@
     font-size: 5em;
     margin: 300px 0px;
     margin-left: 3%;
+    
 }
 
 

@@ -7,8 +7,7 @@ const Navigation = () => {
     const [menuBurger, setMenuBurger] = useState(false)
 
     return (
-        <nav id="returnHome">
-
+        <nav id="returnHome" className='navDown'>
             <div className='nav-btn'>
                 <button className='btn__color' onClick={() => setMenuBurger(!menuBurger)}  > 🍔 </button>
             </div>
@@ -20,13 +19,12 @@ const Navigation = () => {
                 </ul>}
             {/* ATTENTION GRAND ECRAN */}
             <div className='liste__big__screen__logo' >
-                <Logo />
+               <Logo />
                 <ul className='liste__big__screen'>
                     <li className='liste__li__big'><a href="">Comment Faire ?</a></li>
                     <li className='liste__li__big'><a href="#returnQuest">Questionnaire  </a></li>
                 </ul>
             </div>
-
         </nav>
     );
 };
