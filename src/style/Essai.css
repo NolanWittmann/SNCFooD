@@ -56,11 +56,20 @@
     border-radius: 1rem;
     margin-bottom: 1%;
     font-size: 2.5rem;
-    color : rgb(224, 54, 24);
+    color : rgb(255, 8, 0);
 }
 
+
+.btnLeft:focus{
+    border: #EF444A solid 3px;
+}
+.btnRight:focus {
+    border: #EF444A solid 3px;
+}
+
+
 .btnRight {
-    color : #EF444A;
+    color : #ff9114;
     width: 30%;
     margin-left: 10%;
     border-radius: 1rem;

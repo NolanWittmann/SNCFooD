@@ -41,8 +41,8 @@ const Footer = () => {
                 <div className='leftPart'>
                     <img className='logoFooter' src="./assets/logoBlanc.png" alt="" />
                     <ul>
-                        {reseau.map(logo =>
-                            <li className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}
+                        {reseau.map((logo, index) =>
+                            <li key={index} className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}
                     </ul>
 
                 </div>
@@ -50,8 +50,8 @@ const Footer = () => {
                 <div className='centerPart'>
                     <ul>
                         <h2 className='centerPart-h2'>RECETTES</h2>
-                        {recettes.map(recette =>
-                            <li className='centerPart-li'><a href="">{recette}</a></li>
+                        {recettes.map((recette, index) =>
+                            <li key={index} className='centerPart-li'><a href="">{recette}</a></li>
                         )}
                     </ul>
                 </div>
@@ -59,8 +59,8 @@ const Footer = () => {
                 <div className="rightPart">
                     <ul>
                         <h2 className='rightPart-h2'>CATEGORIES</h2>
-                        {categories.map(categorie =>
-                            <li className='rightPart-li'><a href="#">{categorie}</a></li>)}
+                        {categories.map((categorie, index) =>
+                            <li key={index} className='rightPart-li'><a href="#">{categorie}</a></li>)}
                     </ul>
                 </div>
 
