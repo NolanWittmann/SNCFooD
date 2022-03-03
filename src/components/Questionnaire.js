@@ -27,7 +27,7 @@ const questions = [
 
 ]
 
-const Essai = () => {
+const Questionnaire = () => {
 
     const [response, setResponse] = useState(questions)
     const [scoreNutri, setScoreNutri] = useState(0)
@@ -124,4 +124,4 @@ return (
     }
 
 
-export default Essai;
+export default Questionnaire;

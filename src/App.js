@@ -12,7 +12,6 @@ function App() {
     <div className="App">
       <Navigation />
       <Questionnaire />
-      <Response />
       <Footer />
     </div>
 
