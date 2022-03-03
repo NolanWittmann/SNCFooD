@@ -1,89 +1,127 @@
-import React from 'react';
-import '../style/Questionnaire.css'
+import React, { useEffect, useState } from 'react';
+import { Animator, batch, Fade, MoveIn, ScrollContainer, ScrollPage, ZoomOut } from 'react-scroll-motion';
+import "../style/Questionnaire.css"
+import Aos from 'aos';
+import "aos/dist/aos.css"
+
+const questions = [
+
+    {
+        id: 0,
+        question: "Vous êtes,",
+        possibilities: ["Un homme", "Une femme"],
+        reponse: ""
+    },
+    {
+        id: 1,
+        question: "Quel est la situation de votre métier ?",
+        possibilities: ["Sedentaire", "Terrain"],
+        reponse: ""
+    },
+    {
+        id: 2,
+        question: "Souhaitez-vous perdre du poids ?",
+        possibilities: ["Oui", "Non"],
+        reponse: ""
+    }
+
+]
 
 const Questionnaire = () => {
 
-    return (
-        <div id="returnQuest" className='page-questionnaire'>
+    const [response, setResponse] = useState(questions)
+    const [scoreNutri, setScoreNutri] = useState(0)
 
-            <h1 className='title'>Commençons les amis :</h1>
+    useEffect(() => {
+        Aos.init({ duration: 3000 })
+    }, [])
 
-            <section className='questionnaire'>
+    const choiceFood = (userId, userReponse) => {
 
-                <div className='name'>
-                    <div className='name-div'>
-                        <div>
-                            <p><span className='pSpan'>1</span>/5</p>
-                        </div>
-                        <div className='name__input'>
-                            <label className='name__input-label'>Quel est ton prénom ?</label>
-                            <input className='name__input-input' type='text'></input>
-                        </div>
-                    </div>
-                </div>
+        const arrayFilter = response.filter(questDone => {
+            return questDone.id !== userId
+        })
 
-                <div className='genre'>
-                    <div className='genre-div'>
-                        <div>
-                            <p><span className='pSpan'>2</span>/5</p>
-                        </div>
-                        <div>
-                            <p className='genre__question'>Vous êtes,</p>
-                        </div>
-                        <div className='genre__genre'>
-                            <p><button className='genre__genre-homme'>Un homme</button></p>
-                            <p><button className='genre__genre-femme'>Une femme</button></p>
-                        </div>
-                    </div>
-                </div>
+        const currentQuestion = questions[userId]
+        currentQuestion.reponse = userReponse
+        arrayFilter.push(currentQuestion)
 
-                <div className='metier'>
-                    <div className='metier-div'>
-                        <div>
-                            <p><span className='pSpan'>3</span>/5</p>
-                        </div>
-                        <div>
-                            <p className='metier__question'>Quel est la situation de votre métier ?</p>
-                        </div>
-                        <div className='metier__question-situation'>
-                            <p><button className='metier__question-sedentaire'>Un métier sédentaire</button></p>
-                            <p><button className='metier__question-terrain'>Un métier de terrain</button></p>
-                        </div>
-                    </div>
-                </div>
+        setResponse(arrayFilter)
+    }
 
-                <div className='vegetarien'>
-                    <div className='vegetarien-div'>
-                        <div>
-                            <p><span className='pSpan'>4</span>/5</p>
-                        </div>
-                        <div>
-                            <p className='vegetarien__question'>Etes-vous végétarien ?</p>
-                        </div>
-                        <div className='vegetarien__question-reponse'>
-                            <p><button className='vegetarien__question-oui'>Oui</button></p>
-                            <p><button className='vegetarien__question-non'>Non</button></p>
-                        </div>
-                    </div>
-                </div>
+    const calorieCompteur = () => {
+        if (response.every(totalQuest => totalQuest.reponse !== "")) {
+            if (response[0].reponse === "Un homme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 2100)
+            }
+            if (response[0].reponse === "Une femme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 1800)
+            }
+            if (response[1].reponse === "Sedentaire") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 0)
+            }
+            if (response[1].reponse === "Terrain" && response[0].reponse === "Un homme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 400)
+            }
+            if (response[1].reponse === "Terrain" && response[0].reponse === "Une femme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 200)
+            }
+            if (response[2].reponse === "Oui" && response[0].reponse === "Une femme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri - 400)
+            }
+            if (response[2].reponse === "Non" && response[0].reponse === "Un femme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 0)
+            }
+            if (response[2].reponse === "Oui" && response[0].reponse === "Un homme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri - 500)
+            }
+            if (response[2].reponse === "Non" && response[0].reponse === "Un homme") {
+                setScoreNutri(prevScoreNutri => prevScoreNutri + 0)
+            }
+        }
+        else {
+          alert("MANON")
+         }
+    }
 
-                <div className='horaire'>
-                    <div className='horaire-div'>
-                        <div>
-                            <p><span className='pSpan'>5</span>/5</p>
-                        </div>
-                        <div>
-                            <p className='horaire__question'>Travaillez-vous en horaires décalés ?</p>
-                        </div>
-                        <div className='horaire__question-reponse'>
-                            <p><button className='horaire__question-oui'>Oui</button></p>
-                            <p><button className='horaire__question-non'>Non</button></p>
-                        </div>
-                    </div>
-                </div>
-            </section >
-        </div >
-    );
-}
+
+
+const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
+
+return (
+    <ScrollContainer>
+
+
+        <div>
+
+            <ScrollPage page={0}>
+                <Animator animation={animationOnTitle}>
+                    <h1 className='questionTitle'>Commençons les amis ! </h1>
+                </Animator>
+            </ScrollPage>
+
+            <div className='grosseDiv'>
+                {questions.map((quest, indexQuest) =>
+
+                    <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-left" : "fade-right"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
+                        {quest.possibilities.map((possibility, indexPossi) =>
+                            <button key={indexPossi} onClick={() => choiceFood(quest.id, possibility)} className={indexPossi % 2 === 0 ? "btnLeft" : "btnRight"}>{possibility}</button>)}</div>
+
+                )}
+
+
+            </div>
+            <p>{scoreNutri} Calories</p>
+            <button onClick={calorieCompteur}>Valide ton choix </button>
+        </div>
+
+    </ScrollContainer >
+
+);
+
+            
+
+    }
+
 
 export default Questionnaire;

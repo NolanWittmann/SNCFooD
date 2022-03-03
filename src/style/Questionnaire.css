@@ -1,31 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
 
+* {
+    font-family: Outfit, "sans serif";
+}
+
 :root {
-    --colorQuest: rgba(255, 255, 255, 0.322);
-}
-
-*{
-    font-family: Outfit, 'sans sérif' ;
-}
-
-/*titre de la page*/
-.title {
-    color: white;
-    font-family: Outfit, 'sans sérif';
-    font-size: 5em;
-    margin: 160px 0px;
-    margin-left: 3%;
+    --colorQuest: rgba(221, 221, 221, 0.432);
 }
 
 
-/*questionnaire de la page*/
-.questionnaire{
+.questionTitle {
+    margin-top: 33%;
+    margin-left: 10%;
+    font-size: 4rem;
+}
+
+.grosseDiv {
+    height: 330vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.partLeft {
+    height: 45%;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
+    margin-bottom: 1%;
     display: flex;
     flex-direction: column;
-    font-size: 3em;
-    color: white;
+    justify-content: center;
+    align-items: flex-end;
 }
 
+<<<<<<< HEAD
 
 /* style numéro des questions*/
 .pSpan{
@@ -42,14 +54,23 @@
     height: 500px;
     background-color: var(--colorQuest);
     border-radius: 12px;
+=======
+.partRight {
+    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
+    height: 45%;
+    width: 90%;
+    border-radius: 1rem;
+    margin-bottom: 1%;
+>>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.name-div{
-    margin-right: 22%;
-}
+.btnLeft {
 
+<<<<<<< HEAD
 .name__input-label{
     display: block;
     margin-bottom: 20%;
@@ -148,18 +169,34 @@
 }
 
 .vegetarien-div{
-    margin-left: 10%;
-    width: 100%;
-}
-
-.vegetarien__question-oui, .vegetarien__question-non{
-    border: none;
+=======
     width: 30%;
-    height: 90px;
-    border-radius: 1em;
-    font-size: 0.5em;
+>>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
+    margin-left: 10%;
+    border-radius: 1rem;
+    margin-bottom: 1%;
+    font-size: 2.5rem;
+    color : rgb(255, 8, 0);
 }
 
+
+.btnLeft:focus{
+    border: #EF444A solid 3px;
+}
+.btnRight:focus {
+    border: #EF444A solid 3px;
+}
+
+
+.btnRight {
+    color : #ff9114;
+    width: 30%;
+    margin-left: 10%;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+<<<<<<< HEAD
 .vegetarien__question-reponse p{
     margin: 20px 0;
 }
@@ -175,13 +212,25 @@
     border-radius: 12px;
     display: flex;
     justify-content: flex-end;
+=======
+.questionLeft {
+
+    width: 85%;
+    margin-right: 10%;
+    text-align: right;
+    font-size: 3rem;
+>>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
 }
 
-.horaire-div{
-    margin-left: 50%;
-    width: 100%;
+.questionRight {
+
+    width: 85%;
+    margin-left: 5%;
+    text-align: left;
+    font-size: 3rem;
 }
 
+<<<<<<< HEAD
 .horaire__question-reponse p{
     margin: 20px 0;
 }
@@ -246,4 +295,8 @@
         justify-content: center;
         margin: 20px 10px;
     }
+=======
+.partLeft .btnLeft, .btnRight {
+    margin-right: 10%;
+>>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
 }

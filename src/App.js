@@ -1,7 +1,10 @@
 import React from "react";
-import Questionnaire from "./components/Questionnaire.js";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import Questionnaire from "./components/Questionnaire.js";
+import Response from "./components/Response";
+
+
 
 
 function App() {
@@ -11,7 +14,7 @@ function App() {
       <Questionnaire />
       <Footer />
     </div>
-    
+
   );
 }
 
