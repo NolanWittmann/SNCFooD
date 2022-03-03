@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
-import Essai from "./components/Essai.js";
+import Questionnaire from "./components/Questionnaire";
 
 
 
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <Essai />
+      <Questionnaire />
       <Footer />
     </div>
 
