@@ -3,6 +3,7 @@ import { Animator, batch, Fade, ScrollContainer, ScrollPage, ZoomOut } from 'rea
 import "../style/Questionnaire.css"
 import Aos from 'aos';
 import "aos/dist/aos.css"
+import { Link } from 'react-router-dom';
 
 const questions = [
 
@@ -95,13 +96,12 @@ const Questionnaire = () => {
         <ScrollContainer>
             <div>
 
-                <ScrollPage page={0}>
-                    <Animator animation={animationOnTitle}>
-                        <h1 className='questionTitle'>Commençons les amis ! </h1>
-                    </Animator>
-                </ScrollPage>
-
                 <div className='grosseDiv' id="questionAncre">
+                    <ScrollPage page={0}>
+                        <Animator animation={animationOnTitle}>
+                            <h1 className='questionTitle'>Commençons les amis ! </h1>
+                        </Animator>
+                    </ScrollPage>
                     {questions.map((quest, indexQuest) =>
 
                         <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-left" : "fade-right"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
@@ -114,10 +114,10 @@ const Questionnaire = () => {
                 </div>
                 <p>{scoreNutri} Calories</p>
                 <div className='displayBtn'>
-                <button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix </button>
-                <a href='#questionAncre' className='resetQuestion'><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></a>
+                   <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix</button></Link>
+                    <a href='#questionAncre' className='resetQuestion'><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></a>
                 </div>
-                
+
             </div>
         </ScrollContainer >
 
