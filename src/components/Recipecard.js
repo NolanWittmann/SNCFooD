@@ -13,8 +13,8 @@ function Recipecard({ recipe, title, image, ingredients }) {
       />
       <p className="recipeCard__name">{recipe["recipe"]["label"]}</p>
       <ul>
-        {ingredients.map((ingredient) => (
-          <li>{ingredient.text}</li>
+        {ingredients.map((ingredient, index) => (
+          <li key={index}>{ingredient.text}</li>
         ))}
       </ul>
     </div>
