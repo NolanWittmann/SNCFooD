@@ -1,8 +1,9 @@
 import React from "react";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
-import Questionnaire from "./components/Questionnaire.js";
-import Response from "./components/Response";
+import Questionnaire from "./components/Questionnaire";
+import Recette from "./components/Recette";
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
 
@@ -10,9 +11,14 @@ import Response from "./components/Response";
 function App() {
   return (
     <div className="App">
-      <Navigation />
-      <Questionnaire />
-      <Footer />
+      <BrowserRouter>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Questionnaire />} />
+          <Route path="/recette" element={<Recette />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
 
   );

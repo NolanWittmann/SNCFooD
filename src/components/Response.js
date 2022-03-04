@@ -1,26 +1,33 @@
 import "../style/Response.css"
 import React, {useEffect, useState} from 'react';
-import Axios from 'axios';
+import axios from 'axios';
 import Recipecard from "./Recipecard"
 
-function Response() {
-    const [recipes, setRecipes] = useState([])
-    const [query, setQuery] = useState("");
-    const [healthLabel, setHealthLabel] = useState("vegetarian");
+function Response(props) {
+  const [recipes, setRecipes] = useState([]);
+  const [query, setQuery] = useState("");
+  const [healthLabel, setHealthLabel] = useState("vegetarian");
+  const [maj, setMaj] = useState(false);
+  let maxCalories = 0;
+  let minCalories = 0;
 
-    
+  function calories() {
+    maxCalories = props.scoreNutri + 200;
+    minCalories = props.scoreNutri - 200;
+  }
 
-    const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}`
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&calories=${minCalories}-${maxCalories}`;
 
-    const getRecipeInfo = async () => {
-        const result = await Axios.get(url);
-        setRecipes(result.data.hits);
-        console.log(result.data.hits);
-    };
+  const getRecipeInfo = async () => {
+    calories();
+    const result = await axios.get(url);
+    setRecipes(result.data.hits);
+  }
+    //console.log(result.data.hits);
 
     useEffect(() => {
       getRecipeInfo();
-    }, [query]);
+    }, [maj]);
   
     const onSubmit = (e) => {
         e.preventDefault();
@@ -29,7 +36,7 @@ function Response() {
 
     return (
         <div className ="response">
-          <h1 onClick={getRecipeInfo}></h1>
+          
           <form className="response__searchForm" onSubmit={onSubmit}>
             <input
               type="text"
@@ -91,7 +98,7 @@ function Response() {
                 Sans crustacés
               </option>
             </select>
-        <input type="submit" value="Obtenez une recette" className="recipe__submit" />
+        <input type="submit" value="Obtenez une recette" className="recipe__submit" onClick={getRecipeInfo}/>
       </form>
 
       <div className="response__recipes">
