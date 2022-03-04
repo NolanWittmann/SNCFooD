@@ -80,7 +80,6 @@ const Questionnaire = () => {
             if (response[2].reponse === "Non" && response[0].reponse === "Un homme") {
                 setScoreNutri(prevScoreNutri => prevScoreNutri + 0)
             }
-            
         }
         else {
           alert("MANON")
@@ -113,21 +112,17 @@ return (
 
 
             </div>
-
-            
             <p>{scoreNutri} Calories</p>
-            <Link to="/recette"><button onClick={calorieCompteur}>Valide ton choix </button></Link>
-            
-            
-            
-
+            <button onClick={calorieCompteur}>Valide ton choix </button>
         </div>
 
     </ScrollContainer >
 
 );
 
+            
 
-}
+    }
+
 
 export default Questionnaire;
