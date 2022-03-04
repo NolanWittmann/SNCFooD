@@ -17,7 +17,6 @@
 
 .grosseDiv {
     height: 330vh;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +25,7 @@
 
 
 .partLeft {
-    height: 30%;
+    height: 25%;
     width: 90%;
     border-radius: 1rem;
     box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
@@ -42,7 +41,7 @@
 
 .partRight {
     box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
-    height: 28%;
+    height: 25%;
     width: 90%;
     border-radius: 1rem;
     margin-bottom: 1%;
@@ -54,7 +53,6 @@
 }
 
 .btnLeft {
-
     width: 30%;
     margin-left: 10%;
     border-radius: 1rem;
@@ -90,7 +88,6 @@
 }
 
 .questionLeft {
-
     width: 85%;
     margin-right: 10%;
     text-align: right;
@@ -98,7 +95,6 @@
 }
 
 .questionRight {
-
     width: 85%;
     margin-left: 5%;
     text-align: left;
