@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Animator, batch, Fade, MoveIn, ScrollContainer, ScrollPage, ZoomOut } from 'react-scroll-motion';
+import { Animator, batch, Fade, ScrollContainer, ScrollPage, ZoomOut } from 'react-scroll-motion';
 import "../style/Questionnaire.css"
 import Aos from 'aos';
 import "aos/dist/aos.css"
+import { Link } from 'react-router-dom';
 
 const questions = [
 
@@ -80,49 +81,51 @@ const Questionnaire = () => {
             }
         }
         else {
-          alert("MANON")
-         }
+            alert("MANON")
+        }
     }
 
 
 
-const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
+    const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
 
-return (
-    <ScrollContainer>
+    return (
 
 
-        <div ><a id="returnQuest"></a>
 
-            <ScrollPage page={0}>
-                <Animator animation={animationOnTitle}>
-                    <h1 className='questionTitle'>Commençons les amis ! </h1>
-                </Animator>
-            </ScrollPage>
+        <ScrollContainer>
+            <div>
 
-            <div className='grosseDiv'>
-                {questions.map((quest, indexQuest) =>
+                <div className='grosseDiv' id="questionAncre">
+                    <ScrollPage page={0}>
+                        <Animator animation={animationOnTitle}>
+                            <h1 className='questionTitle'>Commençons les amis ! </h1>
+                        </Animator>
+                    </ScrollPage>
+                    {questions.map((quest, indexQuest) =>
 
-                    <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-left" : "fade-right"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}>
-                     <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
-                        {quest.possibilities.map((possibility, indexPossi) =>
-                            <button key={indexPossi} onClick={() => choiceFood(quest.id, possibility)} className={indexPossi % 2 === 0 ? "btnLeft" : "btnRight"}>{possibility}</button>)}</div>
+                        <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-left" : "fade-right"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
+                            {quest.possibilities.map((possibility, indexPossi) =>
+                                <button key={indexPossi} onClick={() => choiceFood(quest.id, possibility)} className={indexPossi % 2 === 0 ? "btnLeft" : "btnRight"}>{possibility}</button>)}</div>
 
-                )}
+                    )}
 
+
+                </div>
+                <p>{scoreNutri} Calories</p>
+                <div className='displayBtn'>
+                   <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix</button></Link>
+                    <a href='#questionAncre' className='resetQuestion'><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></a>
+                </div>
 
             </div>
-            <p>{scoreNutri} Calories</p>
-            <button onClick={calorieCompteur}>Valide ton choix </button>
-        </div>
+        </ScrollContainer >
 
-    </ScrollContainer >
+    );
 
-);
 
-            
 
-    }
+}
 
 
 export default Questionnaire;
