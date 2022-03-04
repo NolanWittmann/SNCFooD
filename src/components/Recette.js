@@ -5,7 +5,6 @@ import Response from './Response';
 const Recette = () => {
     return (
         <div>
-            <h1>Ehhhh</h1>
             <Response />
         </div>
     );
