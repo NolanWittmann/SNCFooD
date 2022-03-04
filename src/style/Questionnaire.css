@@ -17,7 +17,7 @@
 
 .grosseDiv {
     height: 330vh;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,200 +26,75 @@
 
 
 .partLeft {
-    height: 45%;
+    height: 30%;
     width: 90%;
     border-radius: 1rem;
-    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
+    box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
     margin-bottom: 1%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-}
-
-<<<<<<< HEAD
-
-/* style numéro des questions*/
-.pSpan{
-    font-weight: bold;
-    color: rgb(179, 23, 82);
+    background-image: url("../../public/assets/legumes.png");
 }
 
 
-/*question 1 name*/
-.name{
-    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
-    margin: 50px 20px;
-    padding: 20px;
-    height: 500px;
-    background-color: var(--colorQuest);
-    border-radius: 12px;
-=======
+
 .partRight {
-    box-shadow: 10px 5px 10px 5px rgba(74,70,70,0.37);
-    height: 45%;
+    box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
+    height: 28%;
     width: 90%;
     border-radius: 1rem;
     margin-bottom: 1%;
->>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    background-image: url("../../public/assets/legumes.png");
 }
 
 .btnLeft {
 
-<<<<<<< HEAD
-.name__input-label{
-    display: block;
-    margin-bottom: 20%;
-    width: 500px;
-}
-
-.name__input-input {
-    border: none;
-    outline: 1px solid rgba(95, 95, 95, 0);
-    height: 100px;
-    width: 400px;
-    font-size: 1em;
-    border-radius: 12px;
-    padding-left: 20px;
-    color: black;
-}
-
-
-
-/*question 2 genre*/
-.genre{
-    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
-    margin: 50px 20px;
-    padding: 20px;
-    height: 500px;
-    background-color: var(--colorQuest);
-    border-radius: 10px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.genre-div{
-    margin-left: 10%;
-    width: 100%;
-}
-
-.genre__genre{
-    margin-bottom: 20%;
-    width: 100%;
-    display: block;
-}
-
-.genre__genre p{
-    margin: 20px 0;
-}
-
-.genre__genre-homme, .genre__genre-femme{
-    border: none;
     width: 30%;
-    height: 90px;
-    border-radius: 1em;
-    font-size: 0.5em;
-}
-
-
-
-/*question 3 métier*/
-.metier{
-    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
-    margin: 50px 20px;
-    padding: 20px;
-    height: 500px;
-    background-color: var(--colorQuest);
-    border-radius: 12px;
-    display: flex;
-}
-
-.metier-div{
-    margin-left: 50%;
-    width: 100%;
-}
-
-.metier__question-situation p{
-    margin: 20px 0;
-}
-
-.metier__question-sedentaire, .metier__question-terrain{
-    border: none;
-    width: 55%;
-    height: 90px;
-    border-radius: 1em;
-    font-size: 0.5em;
-}
-
-
-/*question 4 vegetarien*/
-.vegetarien{
-    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
-    margin: 50px 20px;
-    padding: 20px;
-    height: 500px;
-    background-color: var(--colorQuest);
-    border-radius: 12px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.vegetarien-div{
-=======
-    width: 30%;
->>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
     margin-left: 10%;
     border-radius: 1rem;
     margin-bottom: 1%;
     font-size: 2.5rem;
-    color : rgb(255, 8, 0);
+    color: rgba(224, 54, 24);
 }
 
 
-.btnLeft:focus{
-    border: #EF444A solid 3px;
+.btnLeft:focus {
+    border: rgba(224, 54, 24) solid 3px;
 }
+
 .btnRight:focus {
-    border: #EF444A solid 3px;
+    border: rgba(224, 54, 24) solid 3px;
+}
+
+.btnLeft:hover {
+    box-shadow: 0px 0px 40px 10px rgba(224, 54, 24);
+}
+
+.btnRight:hover {
+    box-shadow: 0px 0px 40px 10px rgba(224, 54, 24);
 }
 
 
 .btnRight {
-    color : #ff9114;
+    color: rgba(224, 54, 24);
     width: 30%;
     margin-left: 10%;
     border-radius: 1rem;
     font-size: 2.5rem;
 }
 
-<<<<<<< HEAD
-.vegetarien__question-reponse p{
-    margin: 20px 0;
-}
-
-
-/*question 5 horaire*/
-.horaire{
-    box-shadow: 0.5rem 0.5rem 0.5rem  rgba(0, 0, 0, 0.329);
-    margin: 50px 20px;
-    padding: 20px;
-    height: 500px;
-    background-color: var(--colorQuest);
-    border-radius: 12px;
-    display: flex;
-    justify-content: flex-end;
-=======
 .questionLeft {
 
     width: 85%;
     margin-right: 10%;
     text-align: right;
     font-size: 3rem;
->>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
 }
 
 .questionRight {
@@ -230,73 +105,16 @@
     font-size: 3rem;
 }
 
-<<<<<<< HEAD
-.horaire__question-reponse p{
-    margin: 20px 0;
-}
-
-.horaire__question-oui, .horaire__question-non{
-    border: none;
-    width: 55%;
-    height: 90px;
-    border-radius: 1em;
-    font-size: 0.5em;
-}
-
-
-@media all and (max-width: 1000px)  {
-    .title {
-        font-size: 5em;
-    }
-}
-
-@media all and (max-width: 850px)  {
-    .questionnaire{
-        display: flex;
-        flex-direction: column;
-        font-size: 2.5em;
-    }
-
-    .name, .genre, .metier, .vegetarien, .horaire{
-        display: block;
-        justify-content: center;
-        margin: 20px 10px;
-    }
-
-    .name-div, .genre-div, .metier-div, .vegetarien-div, .horaire-div{
-        margin: 0;
-        text-align: center;
-    }
-
-    .name__input-label{
-        width:100%;
-        text-align: center;
-    }
-    .name__input-input {
-        width: 90%;
-
-    }
-    .genre__genre-homme, .genre__genre-femme, .metier__question-sedentaire, .metier__question-terrain, .vegetarien__question-oui, .vegetarien__question-non, .horaire__question-oui, .horaire__question-non{
-        width: 90%;
-    }
-}
-
-@media all and (max-width: 500px)  {
-    .title {
-        font-size: 2em;
-    }
-
-    .questionnaire{
-        font-size: 2em;
-    }
-
-    .name, .genre, .metier, .vegetarien, .horaire{
-        display: block;
-        justify-content: center;
-        margin: 20px 10px;
-    }
-=======
 .partLeft .btnLeft, .btnRight {
     margin-right: 10%;
->>>>>>> 361ab13563d903bdb4ae7eacad770d9fba2fcf2a
+}
+
+.buttonQuestion {
+    width: 30%;
+    margin-left: 12%;
+    margin-bottom: 10%;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    background-color: rgba(224, 54, 24);
+    color: white;
 }
