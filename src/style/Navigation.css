@@ -11,6 +11,10 @@ nav {
 
 
 /* Grand ecran */
+.linkBigScreen{
+    text-decoration: none;
+}
+
 .liste__big__screen__logo {
     margin-top: 30px;
     display: flex;

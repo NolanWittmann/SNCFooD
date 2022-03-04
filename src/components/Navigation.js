@@ -1,4 +1,5 @@
 import React, { useState} from 'react';
+import { Link } from 'react-router-dom';
 import "../style/Navigation.css";
 import Logo from "./Logo";
 
@@ -23,7 +24,7 @@ const Navigation = () => {
                <Logo />
                 <ul className='liste__big__screen'>
                     <li className='liste__li__big'><a href="">Comment Faire ?</a></li>
-                    <li className='liste__li__big'><a href="#returnQuest">Questionnaire  </a></li>
+                 <Link className='linkBigScreen' to="/"><li className='liste__li__big'>Questionnaire</li></Link>   
                 </ul>
             </div>
         </nav>
