@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import Navigation from "../Navigation"
+import Footer from "../Footer"
 import { Animator, batch, Fade, ScrollContainer, ScrollPage, ZoomOut } from 'react-scroll-motion';
-import "../style/Questionnaire.css"
+import "../../style/Questionnaire.css"
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { Link } from 'react-router-dom';
@@ -85,7 +87,7 @@ const Questionnaire = () => {
         }
     }
 
-
+    
 
     const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
 
@@ -95,7 +97,7 @@ const Questionnaire = () => {
 
         <ScrollContainer>
             <div>
-
+                <Navigation />
                 <div className='grosseDiv' id="questionAncre">
                     <ScrollPage page={0}>
                         <Animator animation={animationOnTitle}>
@@ -114,10 +116,10 @@ const Questionnaire = () => {
                 </div>
                 <p>{scoreNutri} Calories</p>
                 <div className='displayBtn'>
-                   <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix</button></Link>
+             {response.every(totalQuest => totalQuest.reponse !== "")  && <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix</button></Link>}
                     <a href='#questionAncre' className='resetQuestion'><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></a>
                 </div>
-
+                <Footer />
             </div>
         </ScrollContainer >
 
