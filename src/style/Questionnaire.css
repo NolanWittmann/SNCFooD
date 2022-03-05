@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    font-family: Outfit, "sans serif";
+}
+
+:root {
+    --colorQuest: rgba(221, 221, 221, 0.432);
+}
+
+
+.questionTitle {
+    margin-top: 33%;
+    margin-left: 10%;
+    font-size: 4rem;
+}
+
+.grosseDiv {
+    height: 330vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.partLeft {
+    height: 25%;
+    width: 90%;
+    border-radius: 1rem;
+    box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-image: url("../../public/assets/legumes.png");
+}
+
+
+
+.partRight {
+    box-shadow: 10px 5px 10px 5px rgba(74, 70, 70, 0.37);
+    height: 25%;
+    width: 90%;
+    border-radius: 1rem;
+    margin-bottom: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url("../../public/assets/legumes.png");
+}
+
+.btnLeft {
+    width: 30%;
+    margin-left: 10%;
+    border-radius: 1rem;
+    margin-bottom: 1%;
+    font-size: 2.5rem;
+    color: rgba(224, 54, 24);
+}
+
+
+.btnLeft:focus {
+    border: rgba(224, 54, 24) solid 3px;
+}
+
+.btnRight:focus {
+    border: rgba(224, 54, 24) solid 3px;
+}
+
+.btnLeft:hover {
+    box-shadow: 0px 0px 20px 2px rgba(224, 54, 24);
+}
+
+.btnRight:hover {
+    box-shadow: 0px 0px 20px 2px rgba(224, 54, 24);
+}
+
+
+.btnRight {
+    color: rgba(224, 54, 24);
+    width: 30%;
+    margin-left: 10%;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+}
+
+.questionLeft {
+    width: 85%;
+    margin-right: 10%;
+    text-align: right;
+    font-size: 3rem;
+}
+
+.questionRight {
+    width: 85%;
+    margin-left: 5%;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.partLeft .btnLeft, .btnRight {
+    margin-right: 10%;
+}
+
+.buttonQuestion {
+    width: 30%;
+    margin-left: 12%;
+    margin-bottom: 10%;
+    border-radius: 1rem;
+    font-size: 2.5rem;
+    background-color: rgba(224, 54, 24);
+    color: white;
+}

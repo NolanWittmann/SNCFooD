@@ -1,10 +1,10 @@
-import "../style/Reponse.css"
-import React, { useEffect, useState } from 'react';
+import "../style/Response.css"
+import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 import Recipecard from "./Recipecard"
 
-function Response() {
-  const [recipes, setRecipes] = useState([])
+function Response(props) {
+  const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
   const [maj, setMaj] = useState(false);
@@ -37,7 +37,7 @@ function Response() {
   return (
     <div className="response">
       <div className="response__ask">
-        <h1 onClick={getRecipeInfo}></h1>
+
         <form className="response__health__searchForm" onSubmit={onSubmit}>
           <input
             type="text"
@@ -99,7 +99,7 @@ function Response() {
               Sans crustacés
             </option>
           </select>
-          <input type="submit" value="Obtenez des recettes" className="recipe__submit" />
+          <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={getRecipeInfo} />
         </form>
       </div>
 
