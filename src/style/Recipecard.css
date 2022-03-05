@@ -1,20 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    font-family: Outfit, "sans serif";
+}
+
+:root {
+  --colorQuest: rgba(221, 221, 221, 0.432);
+  --mainColor: rgba(224, 54, 24);
+}
+
+
 .recipeCard {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    width: 33rem;
+    flex-direction: row;
+    margin: 1rem;
+    border-radius: 2rem;
+    box-shadow: 4px 5px 10px 5px rgba(74, 70, 70, 0.37);
+    background-image: url("../svg/legumes.svg");
+    z-index: 52;
+    background-color: var(--mainColor);
+        
   }
-  
+
   .recipeCard__image {
-    height: 200px;
-    width: 200px;
+    height: 15rem;
+    width: 17rem;
     object-fit: cover;
-    border-radius: 5px;
-  }
+    border-radius: 2rem 0 0 2rem  ;
+ }
   
-  .recipeCard__name {
-    max-width: 200px;
-    text-align: center;
-    margin: 12px 0;
+  .recipeCard__text {
+    color: white;
+    background-color: var(--mainColor);
+    width: 100%;
+    border-radius: 2rem 0 0 2rem;
+    transform: translateX(-2rem);
+    padding-left: 1rem;
+    padding-right: 0;
+    
+  }
+
+  .recipeCard__text__name {
+    text-align: left;
+    font-size: larger;
+    
+  }
+
+  .receipeCard__text__ingredients {
+    text-align: left;
   }
