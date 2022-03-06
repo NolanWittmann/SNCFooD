@@ -6,13 +6,14 @@
 
 :root {
   --colorQuest: rgba(221, 221, 221, 0.432);
-  --mainColor: rgba(224, 54, 24);
+  --mainColor: rgb(224, 54, 24);
 }
 
 
 .recipeCard {
     display: flex;
     width: 33rem;
+    height: 30rem;
     flex-direction: row;
     margin: 1rem;
     border-radius: 2rem;
@@ -24,13 +25,15 @@
   }
 
   .recipeCard__image {
-    height: 15rem;
     width: 17rem;
     object-fit: cover;
     border-radius: 2rem 0 0 2rem  ;
  }
   
   .recipeCard__text {
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
     color: white;
     background-color: var(--mainColor);
     width: 100%;
@@ -49,4 +52,9 @@
 
   .receipeCard__text__ingredients {
     text-align: left;
+  }
+
+  .recipeCard__text .recipeCard__text__co2Emissions {
+    align-self: flex-end;
+    color: white;
   }
