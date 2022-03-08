@@ -1,0 +1,67 @@
+.homeStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh/1.5);
+}
+
+.creators {
+    margin-top: 11%;
+    margin-right: 2%;
+    text-align: right;
+    color: white;
+    font-weight: 400;
+}
+
+.bgHome {
+    height: 100vh;
+    background-color: rgba(224, 54, 24);
+}
+
+
+.bgHome .logo_sncfood_s {
+    fill: white;
+}
+
+.bgHome .logo_sncfood_n {
+    fill: white
+}
+
+.bgHome .logo_sncfood_c {
+    fill: white
+}
+
+.bgHome .logo_sncfood_f {
+    fill: white
+}
+
+.bgHome .logo_sncfood_o1 {
+    fill: white
+}
+
+.bgHome .logo_sncfood_o2 {
+    fill: white
+}
+
+.bgHome .logo_sncfood_d {
+    fill: white
+}
+
+.bgHome .logo_sncfood_elipse_right {
+    fill: white
+}
+
+.bgHome .logo_sncfood_plate {
+    fill: white
+}
+
+@media screen and (max-width: 580px){
+    .homeStyle{
+        min-width: 20rem;
+    }
+    .creators{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
