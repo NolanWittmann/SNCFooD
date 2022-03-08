@@ -19,6 +19,13 @@ nav {
     margin-top: 2rem;
 } 
 /* Grand ecran */
+.linkBigScreen{
+    text-decoration: none;
+    color: rgb(224, 54, 24);
+    font-weight: bold;
+    font-family: Outfit, 'sans-serif';
+}
+
 .liste__big__screen__logo {
     margin-top: 30px;
     display: flex;
