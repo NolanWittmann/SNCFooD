@@ -8,7 +8,6 @@ const Recette = () => {
     return (
         <div>
             <Navigation />
-            <h1>Ehhhh</h1>
             <Response />
             <Footer />
         </div>

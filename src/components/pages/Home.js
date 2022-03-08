@@ -13,11 +13,14 @@ const Home = () => {
 
   return (
 
-    <div>
+    <div className='bgHome'>
       <div data-aos="zoom-in" className='homeStyle'>
         <Link to="/questionnaire"><Logo /></Link>
       </div>
-      <p className='creator'>SNCFooD by : Les 4 fantastiques Manon alias "Womanizer", Nolan, Anais et Nicolas</p>
+      <div className='creators'>
+        <p >SNCFooD by : Les 4 fantastiques Manon alias "Womanizer", Nolan, Anais et Nicolas</p>
+      </div>
+
     </div>
 
 

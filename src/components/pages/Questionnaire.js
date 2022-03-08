@@ -82,12 +82,10 @@ const Questionnaire = () => {
                 setScoreNutri(prevScoreNutri => prevScoreNutri + 0)
             }
         }
-        else {
-            alert("MANON")
-        }
+
     }
 
-    
+
 
     const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
 
@@ -114,9 +112,9 @@ const Questionnaire = () => {
 
 
                 </div>
-                <p>{scoreNutri} Calories</p>
+
                 <div className='displayBtn'>
-             {response.every(totalQuest => totalQuest.reponse !== "")  && <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Valide ton choix</button></Link>}
+                    {response.every(totalQuest => totalQuest.reponse !== "") && <Link to="/recette"><button className='buttonQuestion' onClick={calorieCompteur}>Validez votre choix</button></Link>}
                     <a href='#questionAncre' className='resetQuestion'><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></a>
                 </div>
                 <Footer />
