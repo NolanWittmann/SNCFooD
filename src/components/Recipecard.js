@@ -11,21 +11,22 @@ function Recipecard({ recipe, title, image, ingredients }) {
         alt="recipe"
         onClick={() => window.open(recipe["recipe"]["url"])}
       />
-      <div className="recipeCard__text">
-          <div className="recipeCard__text__name">
-            <p>{recipe["recipe"]["label"]}</p>
+      <div className="recipeCard__text__colorbox">
+        <div className="recipeCard__text">
+            <div className="recipeCard__text__name">
+              <p>{recipe["recipe"]["label"]}</p>
+            </div>
+            <div className="recipeCard__text__ingredients">
+              <ul>
+                {ingredients.map((ingredient) => (
+                  <li>{ingredient.text}</li>
+                ))}
+              </ul>
           </div>
-          <div className="recipeCard__text__ingredients">
-            <ul>
-              {ingredients.map((ingredient) => (
-                <li>{ingredient.text}</li>
-              ))}
-            </ul>
-          </div>
-          {/* <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p> */}
+        </div>
+        {/* <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p> */}
       </div>
     </div>
-    // </div>
   );
 }
 

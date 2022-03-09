@@ -16,6 +16,7 @@ function Response(props) {
   
   const [maj, setMaj] = useState(false);
   
+
   let maxCalories = 0;
   let minCalories = 0;
 
@@ -24,6 +25,7 @@ function Response(props) {
     minCalories = props.scoreNutri - 200;
   }
 
+  {/* dropdown selectors lables and API matching values */}
   const cuisineTypeOptions = [
     { value: "French", label: "française" },
     { value: "American", label: "américaine" },
@@ -62,6 +64,7 @@ function Response(props) {
   ]
 
   const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&health=alcohol-free&cuisineType=${cuisineTypeLabel}&cuisineType=${cuisineTypeLabel}&mealType=${mealTypeLabel}&diet=${dietLabel}`
+  
 
   const getRecipeInfo = async () => {
     calories()
@@ -82,6 +85,7 @@ function Response(props) {
     <div className="response">
       <div className="response__parameters">
         <form onSubmit={onSubmit} className="response__form">
+          {/* input for searching ingredients. The API accept english only. */}
           <input
             type="text"
             placeholder="Tapez un ingrédient"
@@ -92,14 +96,15 @@ function Response(props) {
               setQuery(e.target.value);
             }}
           />
-            <Select
+          {/* dropdown selectors for API's url filling */}
+          <Select
             options={cuisineTypeOptions}
             placeholder={"Pays..."}
             className="response__cuisineType__select"
             name="mealsType"
             onChange={setCuisineTypeLabel}
-                      />
-            <Select
+          />
+          <Select
             options={mealTypeOptions}
             placeholder={"Repas..."}
             className="response__mealType__select"
@@ -114,6 +119,7 @@ function Response(props) {
             onChange={setDietLabel}
           />
           <Select
+          
             options={healthOptions}
             placeholder={"restrictions..."}
             className="response__health__select"
@@ -123,9 +129,11 @@ function Response(props) {
           />
 
           <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={getRecipeInfo} />
+
         </form>
       </div>
 
+      {/* component */}
       <div className="response__recipes">
         {recipes.map((recipe) => {
           return <Recipecard
@@ -135,12 +143,11 @@ function Response(props) {
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
             emissions={recipe.recipe.co2EmissionsClass}
-          />;
+          />
         })}
       </div>
-
     </div>
-  );
-};
+  )
+}
 
-export default Response;
+export default Response ;

@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.errorPage__wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.omer404 {
+    padding-top: 8rem;
+    max-width: 85vw;
+    max-height: 50vh;
+    transform: translateY(2.2rem);
+}

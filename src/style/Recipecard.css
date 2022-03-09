@@ -29,24 +29,34 @@
     object-fit: cover;
     border-radius: 2rem 0 0 2rem  ;
  }
-  
+  .recipeCard__text__colorbox {
+    background-color: var(--mainColor);
+    border-radius: 2rem 0 0 2rem;
+    transform: translateX(-2rem);
+  }
+
   .recipeCard__text {
-    height: 30rem;
+    height: 25rem;
     display: flex;
     flex-direction: column;
     color: white;
-    background-color: var(--mainColor);
     width: 100%;
-    border-radius: 2rem 0 0 2rem;
-    transform: translateX(-2rem);
     padding-left: 1rem;
-    padding-right: 0;
-    
+    overflow: auto;
+    text-overflow:ellipsis;
+    padding-top: 3.5rem;
   }
 
   .recipeCard__text__name {
+    border-radius: 0 2rem 0 0 ;
+    margin-left: .5rem;
     text-align: left;
     font-size: larger;
+    position: fixed;
+    width: 16.2rem;
+    height: 3rem;
+    transform: translateY(-3.5rem);
+    background-color: var(--mainColor);
     
   }
 
@@ -54,7 +64,28 @@
     text-align: left;
   }
 
-  .recipeCard__text .recipeCard__text__co2Emissions {
+  /* .recipeCard__text .recipeCard__text__co2Emissions {
     align-self: flex-end;
     color: white;
+  } */
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--mainColor);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
   }
