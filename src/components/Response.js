@@ -1,9 +1,6 @@
 import "../style/Response.css"
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import Select from 'react-select'
-=======
->>>>>>> 94aa9ab6b03f0c53936deb455ead8ccc1d1b11a8
 import axios from 'axios';
 import Recipecard from "./Recipecard"
 
@@ -26,7 +23,6 @@ function Response(props) {
     maxCalories = props.scoreNutri + 200;
     minCalories = props.scoreNutri - 200;
   }
-<<<<<<< HEAD
 
   const cuisineTypeOptions = [
     { value: "French", label: "française" },
@@ -67,33 +63,20 @@ function Response(props) {
 
   const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&health=alcohol-free&cuisineType=${cuisineTypeLabel}&cuisineType=${cuisineTypeLabel}&mealType=${mealTypeLabel}&diet=${dietLabel}`
 
-=======
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&calories=${minCalories}-${maxCalories}`;
->>>>>>> 94aa9ab6b03f0c53936deb455ead8ccc1d1b11a8
   const getRecipeInfo = async () => {
     calories()
     const result = await axios.get(url);
     setRecipes(result.data.hits);
-<<<<<<< HEAD
   };
 
   useEffect(() => {
     getRecipeInfo();
   }, [maj]);
 
-=======
-  }
-  //console.log(result.data.hits);
-  useEffect(() => {
-    getRecipeInfo();
-  }, [maj]);
-
->>>>>>> 94aa9ab6b03f0c53936deb455ead8ccc1d1b11a8
   const onSubmit = (e) => {
     e.preventDefault();
     getRecipeInfo();
   };
-<<<<<<< HEAD
 
   return (
     <div className="response">
@@ -142,73 +125,6 @@ function Response(props) {
           <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={getRecipeInfo} />
         </form>
       </div>
-=======
-  return (
-    <div className="response">
-      <form className="response__searchForm" onSubmit={onSubmit}>
-        <input
-          type="text"
-          placeholder="Tapez un ingrédient"
-          autoComplete="Off"
-          className="recipe__input"
-          value={query}
-          onChange={(e) => {
-            setQuery(e.target.value);
-          }}
-        />
-        <select className="recipe__healthLabel">
-          <option
-            value=""
-            onClick={() => {
-              setHealthLabel("");
-            }}
-          >
-            Sans particularité
-          </option>
-          <option
-            value="vegetarian"
-            onClick={() => {
-              setHealthLabel("vegetarian");
-            }}
-          >
-            Végétarien
-          </option>
-          <option
-            value="gluten-free"
-            onClick={() => {
-              setHealthLabel("gluten-free");
-            }}
-          >
-            Sans gluten
-          </option>
-          <option
-            value="pork-free"
-            onClick={() => {
-              setHealthLabel("pork-free");
-            }}
-          >
-            Sans porc
-          </option>
-          <option
-            value="peanut-free"
-            onClick={() => {
-              setHealthLabel("peanut-free");
-            }}
-          >
-            Sans arachides
-          </option>
-          <option
-            value="crustacean-free"
-            onClick={() => {
-              setHealthLabel("crustacean-free");
-            }}
-          >
-            Sans crustacés
-          </option>
-        </select>
-        <input type="submit" value="Obtenez une recette" className="recipe__submit" onClick={getRecipeInfo} />
-      </form>
->>>>>>> 94aa9ab6b03f0c53936deb455ead8ccc1d1b11a8
 
       <div className="response__recipes">
         {recipes.map((recipe) => {
@@ -218,10 +134,7 @@ function Response(props) {
             title={recipe.recipe.label}
             image={recipe.recipe.image}
             ingredients={recipe.recipe.ingredients}
-<<<<<<< HEAD
             emissions={recipe.recipe.co2EmissionsClass}
-=======
->>>>>>> 94aa9ab6b03f0c53936deb455ead8ccc1d1b11a8
           />;
         })}
       </div>
