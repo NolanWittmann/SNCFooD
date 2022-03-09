@@ -11,7 +11,9 @@ function Response(props) {
   const [mealTypeLabel, setMealTypeLabel] = useState("Lunch");
   const [dietLabel, setDietLabel] = useState("balanced");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
+  
   const [maj, setMaj] = useState(false);
+  
   let maxCalories = 0;
   let minCalories = 0;
 
@@ -94,15 +96,13 @@ function Response(props) {
             className="response__cuisineType__select"
             name="mealsType"
             onChange={setCuisineTypeLabel}
-            placeHolder={"Choisissez vos particularités"}
-          />
+                      />
             <Select
             options={mealTypeOptions}
             placeholder={"Repas..."}
             className="response__mealType__select"
             name="repas"
             onChange={setMealTypeLabel}
-            placeHolder={"Choisissez vos particularités"}
           />
           <Select
             options={dietOptions}
@@ -110,7 +110,6 @@ function Response(props) {
             className="response__diet__select"
             name="regime"
             onChange={setDietLabel}
-            placeHolder={"Choisissez vos particularités"}
           />
           <Select
             options={healthOptions}
@@ -119,7 +118,6 @@ function Response(props) {
             isMulti
             name="particularités"
             onChange={setHealthLabel}
-            placeHolder={"Choisissez vos particularités"}
           />
 
           <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={getRecipeInfo} />

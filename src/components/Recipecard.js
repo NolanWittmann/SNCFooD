@@ -20,7 +20,7 @@ function Recipecard({ recipe, title, image, ingredients }) {
               ))}
             </ul>
           </div>
-          <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p>
+          {/* <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p> */}
       </div>
     </div>
   );
