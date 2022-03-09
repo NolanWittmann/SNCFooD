@@ -39,12 +39,12 @@
     width: 100%;
     border-radius: 2rem 0 0 2rem;
     transform: translateX(-2rem);
+    padding-left: 1rem;
     padding-right: 0;
-    overflow: hidden;
-    }
+    
+  }
 
   .recipeCard__text__name {
-    padding-left: 1rem;
     text-align: left;
     font-size: larger;
     
@@ -52,8 +52,6 @@
 
   .receipeCard__text__ingredients {
     text-align: left;
-    /* overflow: hidden;
-    padding-bottom: 1rem; */
   }
 
   .recipeCard__text .recipeCard__text__co2Emissions {

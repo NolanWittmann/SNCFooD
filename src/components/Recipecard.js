@@ -5,8 +5,6 @@ function Recipecard({ recipe, title, image, ingredients }) {
   return (
 
     <div className="recipeCard">
-     <div className="recipeCard__image__name">
-     <p className="recipeCard__name">{recipe["recipe"]["label"]}</p>
       <img
         className="recipeCard__image"
         src={recipe["recipe"]["image"]}
@@ -14,7 +12,9 @@ function Recipecard({ recipe, title, image, ingredients }) {
         onClick={() => window.open(recipe["recipe"]["url"])}
       />
       <div className="recipeCard__text">
-          <p className="recipeCard__text__name">{recipe["recipe"]["label"]}</p>
+          <div className="recipeCard__text__name">
+            <p>{recipe["recipe"]["label"]}</p>
+          </div>
           <div className="recipeCard__text__ingredients">
             <ul>
               {ingredients.map((ingredient) => (
@@ -25,7 +25,7 @@ function Recipecard({ recipe, title, image, ingredients }) {
           {/* <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p> */}
       </div>
     </div>
-    </div>
+    // </div>
   );
 }
 
