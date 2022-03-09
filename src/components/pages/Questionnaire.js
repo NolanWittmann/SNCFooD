@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Navigation from "../Navigation"
 import Footer from "../Footer"
-import { Animator, batch, Fade, ScrollContainer, ScrollPage, ZoomOut } from 'react-scroll-motion';
+import { Animator, batch, Fade, ScrollContainer, ScrollPage, Sticky, ZoomOut } from 'react-scroll-motion';
 import "../../style/Questionnaire.css"
 import Aos from 'aos';
 import "aos/dist/aos.css"
@@ -87,14 +87,14 @@ const Questionnaire = () => {
 
 
 
-    const animationOnTitle = batch(Fade(), ZoomOut(1.2, 0));
+    const animationOnTitle = batch(Fade(-1), ZoomOut(1, 0), Sticky(45, 45));
 
     return (
 
 
 
         <ScrollContainer>
-            <div>
+            <div className='big__grosseDiv'>
                 <Navigation />
                 <div className='grosseDiv' id="questionAncre">
                     <ScrollPage page={0}>
@@ -104,7 +104,7 @@ const Questionnaire = () => {
                     </ScrollPage>
                     {questions.map((quest, indexQuest) =>
 
-                        <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-left" : "fade-right"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
+                        <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-up" : "fade-up"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
                             {quest.possibilities.map((possibility, indexPossi) =>
                                 <button key={indexPossi} onClick={() => choiceFood(quest.id, possibility)} className={indexPossi % 2 === 0 ? "btnLeft" : "btnRight"}>{possibility}</button>)}</div>
 
