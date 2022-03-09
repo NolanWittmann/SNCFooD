@@ -8,8 +8,16 @@
 nav {
     height: 120px;
 }
+.liste__big__screen__logo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 
 
+}
+.logo_sncfood_main {
+    margin-top: 2rem;
+} 
 /* Grand ecran */
 .linkBigScreen{
     text-decoration: none;
@@ -35,6 +43,7 @@ nav {
     padding: 0;
     margin-right: 30px;
     margin-left: 20px;
+    margin-top: 1.5rem;
 }
 
 .liste__li__big {
@@ -87,7 +96,7 @@ nav {
     }
 
     .liste__li a {
-        color: white;
+        color: rgb(241, 14, 63);;
         font-family: Outfit, 'sans-serif';
         text-decoration: none;
 

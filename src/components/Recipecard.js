@@ -5,6 +5,8 @@ function Recipecard({ recipe, title, image, ingredients }) {
   return (
 
     <div className="recipeCard">
+     <div className="recipeCard__image__name">
+     <p className="recipeCard__name">{recipe["recipe"]["label"]}</p>
       <img
         className="recipeCard__image"
         src={recipe["recipe"]["image"]}
@@ -22,6 +24,7 @@ function Recipecard({ recipe, title, image, ingredients }) {
           </div>
           {/* <p className="recipeCard__text__co2Emissions">co²: {recipe["recipe"]["co2EmissionsClass"]}</p> */}
       </div>
+    </div>
     </div>
   );
 }

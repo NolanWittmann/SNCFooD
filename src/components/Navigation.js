@@ -1,8 +1,7 @@
 import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import "../style/Navigation.css";
-import Logo from "./Logo";
-
+import Logo from './Logo';
 
 const Navigation = () => {
 

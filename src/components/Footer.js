@@ -42,7 +42,7 @@ const Footer = () => {
                     <img className='logoFooter' src="./assets/logoBlanc.png" alt="" />
                     <ul>
                         {reseau.map((logo, index) =>
-                            <li key={index} className='leftPart-li'><a href="#"><img src={logo} alt="" height="50px" /></a></li>)}
+                            <li key={index} className='leftPart-li'><a href="#"><img src={logo} alt="" height="60px"/></a> </li>)} 
                     </ul>
 
                 </div>
