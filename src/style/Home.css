@@ -65,3 +65,8 @@
         align-items: flex-end;
     }
 }
+@media screen and (max-width: 330px){
+    .logo_header {
+        margin-left: 0;
+    }
+}

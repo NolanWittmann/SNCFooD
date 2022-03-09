@@ -78,7 +78,6 @@ nav {
     .liste__li {
         height: 50px;
         width: 100%;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.527);
         line-height: 50px;
         text-align: center;
         font-size: 20px;
@@ -87,7 +86,7 @@ nav {
     }
 
     .liste__li a {
-        color: white;
+        color: rgba(224, 54, 24);
         font-family: Outfit, 'sans-serif';
         text-decoration: none;
 

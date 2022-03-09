@@ -10,9 +10,10 @@
 
 
 .questionTitle {
-    margin-top: 33%;
+    margin-top: 70%;
     margin-left: 10%;
     font-size: 4rem;
+    text-align: center;
 }
 
 .grosseDiv {
@@ -114,6 +115,95 @@
     background-color: rgba(224, 54, 24);
     color: white;
     border: none;
-    box-shadow: 5px 5px 25px 5px rgba(0,0,0,0.5);
+    box-shadow: 5px 5px 25px 5px rgba(0, 0, 0, 0.5);
 }
 
+@media screen and (min-width: 200px) and (max-width: 600px) {
+    .questionTitle {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 150%;
+
+    }
+    .partLeft, .partRight {
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .questionLeft, .questionRight {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .btnLeft {
+        width: 50%;
+        margin-right: 10%;
+        border-radius: 1rem;
+        margin-bottom: 1%;
+        font-size: 1.5rem;
+        color: rgba(224, 54, 24);
+    }
+    .btnRight {
+        color: rgba(224, 54, 24);
+        width: 50%;
+        margin-left: 10%;
+        font-size: 1.5rem;
+    }
+    .displayBtn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .buttonQuestion a {
+        text-decoration: none;
+    }
+    .buttonQuestion {
+        width: 200px;
+        font-size: 2rem;
+        margin: 4% auto;
+        
+    }
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+    .questionTitle {
+        font-size: 2.5rem;
+        text-align: center;
+        margin-top: 150%;
+    }
+        .partLeft, .partRight {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+        }
+        .questionLeft, .questionRight {
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        .btnLeft {
+            width: 50%;
+            margin-right: 10%;
+            border-radius: 1rem;
+            margin-bottom: 1%;
+            font-size: 2rem;
+            color: rgba(224, 54, 24);
+        }
+        .btnRight {
+            color: rgba(224, 54, 24);
+            width: 50%;
+            margin-left: 10%;
+            font-size: 2rem;
+        }
+        .displayBtn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .buttonQuestion a {
+            text-decoration: none;
+        }
+
+}

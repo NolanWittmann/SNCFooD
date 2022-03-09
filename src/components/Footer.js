@@ -10,22 +10,22 @@ const Footer = () => {
 
     const reseau = ["./assets/insta.png", "./assets/snap.png", "./assets/twitter.png"]
 
-    const recettes = ["Blanquette de veau", "Quiche Lorraine", "Gateau au Yaourt", "Gratin Dauphinois",
-        "Gateau au Chocolat",
-        "Tiramisu",
-        "Pate a Crepe",
-        "Boeuf Bourguignon",
-        "Tarte aux Pommes",
-        "Mousse au Chocolat",
-        "Pain Perdu",
-        "Poulet Basquaise",
-        "Tomates Farcies",
-        "Pot au Feu"]
+    // const recettes = ["Blanquette de veau", "Quiche Lorraine", "Gateau au Yaourt", "Gratin Dauphinois",
+    //     "Gateau au Chocolat",
+    //     "Tiramisu",
+    //     "Pate a Crepe",
+    //     "Boeuf Bourguignon",
+    //     "Tarte aux Pommes",
+    //     "Mousse au Chocolat",
+    //     "Pain Perdu",
+    //     "Poulet Basquaise",
+    //     "Tomates Farcies",
+    //     "Pot au Feu"]
 
-    const categories = ["Recettes sans Gluten",
-        "Recettes Vegan",
-        "Recettes Végétariennes",
-        "Recettes sans Porc"]
+    // const categories = ["Recettes sans Gluten",
+    //     "Recettes Vegan",
+    //     "Recettes Végétariennes",
+    //     "Recettes sans Porc"]
 
         useEffect(()=>{
             Aos.init({duration: 2000})
@@ -46,7 +46,7 @@ const Footer = () => {
                     </ul>
 
                 </div>
-
+{/* 
                 <div className='centerPart'>
                     <ul>
                         <h2 className='centerPart-h2'>RECETTES</h2>
@@ -62,7 +62,7 @@ const Footer = () => {
                         {categories.map((categorie, index) =>
                             <li key={index} className='rightPart-li'><a href="#">{categorie}</a></li>)}
                     </ul>
-                </div>
+                </div> */}
 
             </div>
         </div>
