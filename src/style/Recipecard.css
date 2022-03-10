@@ -18,8 +18,6 @@
     margin: 1rem;
     border-radius: 2rem;
     box-shadow: 4px 5px 10px 5px rgba(74, 70, 70, 0.37);
-    background-image: url("../svg/legumes.svg");
-    z-index: 52;
     background-color: var(--mainColor);
         
   }
@@ -37,17 +35,21 @@
     color: white;
     background-color: var(--mainColor);
     width: 100%;
-    border-radius: 2rem 0 0 2rem;
+    border-radius: 2rem;
     transform: translateX(-2rem);
-    padding-left: 1rem;
+    padding-left: 2rem;
     padding-right: 0;
+    overflow: scroll;
     
   }
 
   .recipeCard__text__name {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
     text-align: left;
     font-size: larger;
-    
+    background-color: var(--mainColor);
+    padding-left: 1rem;  
   }
 
   .receipeCard__text__ingredients {
@@ -57,4 +59,26 @@
   .recipeCard__text .recipeCard__text__co2Emissions {
     align-self: flex-end;
     color: white;
+  }
+
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgba(0, 128, 0, 0);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
   }
