@@ -4,6 +4,8 @@ import Select from 'react-select'
 import axios from 'axios';
 import Recipecard from "./Recipecard"
 import CalorieContext from "./context/CalorieContext";
+import {Link} from 'react-router-dom'
+
 
 
 function Response(props) {
@@ -13,8 +15,8 @@ function Response(props) {
 
   // let minCal = setScoreNutri(prevScoreNutri => prevScoreNutri - 200);
   // let maxCal = setScoreNutri(prevScoreNutri => prevScoreNutri + 200);
-  let minCal = (scoreNutri - 200)
-  let maxCal = (scoreNutri + 200)
+  let minCal = ((scoreNutri - 200) / 3)
+  let maxCal = ((scoreNutri + 200) / 3)
 
   console.log(minCal)
   console.log(maxCal)
@@ -157,9 +159,12 @@ function Response(props) {
           />
           
 
-          <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={onSubmit} />
+          <input type="submit" value="Obtenez des recettes" className="response__recipe__submit" onClick={onSubmit} />
+
+          
 
         </form>
+        
       </div>
 
       {/* component */}
@@ -175,6 +180,7 @@ function Response(props) {
           />
         })}
       </div>
+      <Link to="/Questionnaire"><button className='buttonQuestion' onClick={() => setScoreNutri(0)}>🠝 Reset 🠝</button></Link>
     </div>
   )
 }
