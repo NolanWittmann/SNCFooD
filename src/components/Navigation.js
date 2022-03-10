@@ -1,23 +1,29 @@
 import React, { useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import "../style/Navigation.css";
 import Logo from './Logo';
 
 const Navigation = () => {
 
     const [menuBurger, setMenuBurger] = useState(false)
+   
+    const handleClick = () => {
+        setMenuBurger(!menuBurger)
+    }
 
     return (
         
         <nav id="returnHome" className='navDown'>
             <div className='nav-btn'>
-                <button className='btn__color' onClick={() => setMenuBurger(!menuBurger)}  > 🍔 </button>
+                <button className='btn__color' onClick={handleClick}  > 🍔 </button>
             </div>
             {/* ATTENTION MENU BURGER PETIT ECRAN */}
             {menuBurger &&
                 <ul className='liste'>
-                    <li className='liste__li'><a href="">Comment Faire ?</a></li>
-                    <li className='liste__li'><a href="#returnQuest">Questionnaire</a></li>
+                    <NavLink className='liste__li' to="/notice"> <li >Comment Faire ?</li></NavLink>  
+                    <NavLink className='liste__li' to="/questionnaire"><li >Questionnaire</li></NavLink>   
+                    {/* <li className='liste__li'><a href="">Comment Faire ?</a></li>
+                    <li className='liste__li'><a href="#returnQuest">Questionnaire</a></li> */}
                 </ul>}
             {/* ATTENTION GRAND ECRAN */}
             <div className='liste__big__screen__logo' >

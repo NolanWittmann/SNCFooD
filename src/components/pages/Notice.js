@@ -6,7 +6,8 @@ import { NavLink } from 'react-router-dom';
 
 const Notice = () => {
 
-    const FadeUp = batch(Fade(), Move(), Sticky());
+    const FadeUpRight = batch(Fade(), MoveOut(-150, 150), Sticky());
+    const FadeUpLeft = batch(Fade(), MoveOut(150, 150), Sticky());
 
     return (
         <div>
@@ -14,28 +15,28 @@ const Notice = () => {
             
             <ScrollContainer>
                 <ScrollPage page={0}>
-                    <Animator animation={batch(Fade(), Sticky(), MoveOut(0, -200))}>
+                    <Animator animation={batch(Fade(), Sticky(50, 90), MoveOut(0, -200))}>
                         <span style={{ fontSize: "50px" }}>Notice d'utilisation 😀</span>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage page={1}>
-                    <Animator animation={FadeUp}>
+                    <Animator animation={FadeUpRight}>
                         <span style={{ fontSize: "40px" }}> SNCFooD est un site de suggestion alimentaire ✨</span>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage page={2}>
-                    <Animator animation={FadeUp}>
+                    <Animator animation={FadeUpLeft}>
                         <span style={{ fontSize: "40px" }}>La première étape : Répondre au questionnaire</span>
                     </Animator>
                 </ScrollPage>
                 <ScrollPage page={3}>
-                    <span style={{ fontSize: "40px" }}> <Animator animation={FadeUp}>Notre questionnaire saura vous :</Animator></span>
+                    <span style={{ fontSize: "40px" }}> <Animator animation={FadeUpRight}>Notre questionnaire saura vous :</Animator></span>
                 </ScrollPage>
                 <ScrollPage page={4}>
-                    <span style={{ fontSize: "40px" }}>  <Animator animation={FadeUp}>Définir un apport calorique 🙋🏻‍♀️</Animator></span>
+                    <span style={{ fontSize: "40px" }}>  <Animator animation={FadeUpLeft}>Définir un apport calorique 🙋🏻‍♀️</Animator></span>
                 </ScrollPage>
                 <ScrollPage page={5}>
-                <span style={{ fontSize: "40px" }}>     <Animator animation={FadeUp}>Avec cet information, proposer des recettes adaptées.</Animator></span>
+                <span style={{ fontSize: "40px" }}>     <Animator animation={FadeUpRight}>Avec cet information, proposer des recettes adaptées.</Animator></span>
                 </ScrollPage>
 
 
@@ -48,6 +49,7 @@ const Notice = () => {
                     </Animator>
                 </ScrollPage>
             </ScrollContainer>
+            
 
         </div >
     );

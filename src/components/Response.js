@@ -1,11 +1,14 @@
 import "../style/Response.css"
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Select from 'react-select'
 import axios from 'axios';
 import Recipecard from "./Recipecard"
+import CalorieContext from "./context/CalorieContext";
 
 
 function Response(props) {
+
+  const { scoreNutri} = useContext(CalorieContext)
 
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");

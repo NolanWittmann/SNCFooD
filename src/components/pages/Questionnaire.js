@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Navigation from "../Navigation"
 import Footer from "../Footer"
-import { Animator, batch, Fade, ScrollContainer, ScrollPage, Sticky, ZoomOut } from 'react-scroll-motion';
 import "../../style/Questionnaire.css"
 import Aos from 'aos';
 import "aos/dist/aos.css"
 import { Link } from 'react-router-dom';
+import CalorieContext from '../context/CalorieContext';
+import Logo from '../Logo';
 
 const questions = [
 
@@ -33,7 +34,9 @@ const questions = [
 const Questionnaire = () => {
 
     const [response, setResponse] = useState(questions)
-    const [scoreNutri, setScoreNutri] = useState(0)
+    const { setScoreNutri} = useContext(CalorieContext)
+
+    
 
     useEffect(() => {
         Aos.init({ duration: 3000 })
@@ -86,22 +89,14 @@ const Questionnaire = () => {
     }
 
 
-
-    const animationOnTitle = batch(Fade(-1), ZoomOut(1, 0), Sticky(45, 45));
-
     return (
-
-
-
-        <ScrollContainer>
+      
             <div className='big__grosseDiv'>
                 <Navigation />
                 <div className='grosseDiv' id="questionAncre">
-                    <ScrollPage page={0}>
-                        <Animator animation={animationOnTitle}>
+               
                             <h1 className='questionTitle'>Commençons les amis ! </h1>
-                        </Animator>
-                    </ScrollPage>
+                      
                     {questions.map((quest, indexQuest) =>
 
                         <div key={indexQuest} data-aos={indexQuest % 2 === 0 ? "fade-up" : "fade-up"} className={indexQuest % 2 === 0 ? "partLeft" : "partRight"}> <p className={indexQuest % 2 === 0 ? "questionLeft" : "questionRight"}>{quest.question}</p>
@@ -119,7 +114,7 @@ const Questionnaire = () => {
                 </div>
                 <Footer />
             </div>
-        </ScrollContainer >
+     
 
     );
 
