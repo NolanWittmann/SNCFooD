@@ -13,8 +13,8 @@ function Response(props) {
   const [mealTypeLabel, setMealTypeLabel] = useState("Lunch");
   const [dietLabel, setDietLabel] = useState("balanced");
   const [healthLabel, setHealthLabel] = useState("vegetarian");
-  
-  const [maj, setMaj] = useState(false);
+   
+  // const [maj, setMaj] = useState(false);
   
 
   let maxCalories = 0;
@@ -48,7 +48,7 @@ function Response(props) {
     { value: "balanced", label: "équilibré" },
     { value: "high-fiber", label: "riche en fibres" },
     { value: "high-protein", label: "riche en protéines" },
-    { value: "low-carb", label: "peut sucré" },
+    { value: "low-carb", label: "peu sucré" },
     { value: "low-fat", label: "faible en gras" },
     { value: "low-sodium", label: "faible en sel" },
   ]
@@ -72,9 +72,22 @@ function Response(props) {
     setRecipes(result.data.hits);
   };
 
-  useEffect(() => {
-    getRecipeInfo();
-  }, [maj]);
+  const handleCuisineChange = (selectedOption) => {
+    setCuisineTypeLabel(selectedOption.value)
+    // console.log(selectedOption.value)
+  }
+
+  const handleMealChange = (selectedOption) => {
+    setMealTypeLabel(selectedOption.value)
+  }
+
+  const handleDietChange = (selectedOption) => {
+    setDietLabel(selectedOption.value)
+  }
+
+  const handleHealthChange = (selectedOption) => {
+    setHealthLabel(selectedOption.value)
+  }
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -93,7 +106,7 @@ function Response(props) {
             className="response__ingredient__input"
             value={query}
             onChange={(e) => {
-              setQuery(e.target.value);
+            setQuery(e.target.value);
             }}
           />
           {/* dropdown selectors for API's url filling */}
@@ -102,21 +115,22 @@ function Response(props) {
             placeholder={"Pays..."}
             className="response__cuisineType__select"
             name="mealsType"
-            onChange={setCuisineTypeLabel}
+            onChange={handleCuisineChange}
+
           />
           <Select
             options={mealTypeOptions}
             placeholder={"Repas..."}
             className="response__mealType__select"
             name="repas"
-            onChange={setMealTypeLabel}
+            onChange={handleMealChange}
           />
           <Select
             options={dietOptions}
             placeholder={"Régime..."}
             className="response__diet__select"
             name="regime"
-            onChange={setDietLabel}
+            onChange={handleDietChange}         
           />
           <Select
           
@@ -125,10 +139,11 @@ function Response(props) {
             className="response__health__select"
             isMulti
             name="particularités"
-            onChange={setHealthLabel}
+            onChange={handleHealthChange}
           />
+          
 
-          <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={getRecipeInfo} />
+          <input type="submit" value="Obtenez des recettes" className="recipe__submit" onClick={onSubmit} />
 
         </form>
       </div>

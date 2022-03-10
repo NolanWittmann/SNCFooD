@@ -6,7 +6,7 @@ import "../../style/NotFound.css"
 const NotFound = () => {
     return (
         <div>
-            <Navigation />
+            {/* <Navigation /> */}
             <div className='errorPage__wrapper'>
                 <img src="./assets/omeraffraid.png " alt="404 error, picture of homer eating the website logo" className="omer404"/>
             </div>
