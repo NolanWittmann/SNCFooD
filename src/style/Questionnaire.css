@@ -10,7 +10,8 @@
 
 
 .questionTitle {
-    margin-top: 70%;
+    margin-top: 20%;
+    margin-bottom: 15%;
     margin-left: 10%;
     font-size: 4rem;
     text-align: center;
@@ -22,6 +23,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    
 }
 
 
@@ -119,10 +121,11 @@
 }
 
 @media screen and (min-width: 200px) and (max-width: 600px) {
+   
     .questionTitle {
         font-size: 2rem;
         text-align: center;
-        margin-top: 150%;
+        margin-top: 45%;
 
     }
     .partLeft, .partRight {
