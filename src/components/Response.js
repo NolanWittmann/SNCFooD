@@ -8,7 +8,18 @@ import CalorieContext from "./context/CalorieContext";
 
 function Response(props) {
 
-  const { scoreNutri} = useContext(CalorieContext)
+  const { scoreNutri,setScoreNutri} = useContext(CalorieContext)
+  console.log(scoreNutri)
+
+  // let minCal = setScoreNutri(prevScoreNutri => prevScoreNutri - 200);
+  // let maxCal = setScoreNutri(prevScoreNutri => prevScoreNutri + 200);
+  let minCal = (scoreNutri - 200)
+  let maxCal = (scoreNutri + 200)
+
+  console.log(minCal)
+  console.log(maxCal)
+  
+
 
   const [recipes, setRecipes] = useState([]);
   const [query, setQuery] = useState("");
@@ -20,13 +31,13 @@ function Response(props) {
   // const [maj, setMaj] = useState(false);
   
 
-  let maxCalories = 0;
-  let minCalories = 0;
+  // let maxCal = 0;
+  // let minCal = 0;
 
-  function calories() {
-    maxCalories = props.scoreNutri + 200;
-    minCalories = props.scoreNutri - 200;
-  }
+  // function calories() {
+  //   maxCal = props.scoreNutri + 200;
+  //   minCal = props.scoreNutri - 200;
+  // }
 
   {/* dropdown selectors lables and API matching values */}
   const cuisineTypeOptions = [
@@ -66,11 +77,11 @@ function Response(props) {
     { value: "fish-free", label: "sans poisson" },
   ]
 
-  const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&health=alcohol-free&cuisineType=${cuisineTypeLabel}&cuisineType=${cuisineTypeLabel}&mealType=${mealTypeLabel}&diet=${dietLabel}`
+  const url = `https://api.edamam.com/api/recipes/v2?type=public&beta=true&q=${query}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&health=${healthLabel}&health=alcohol-free&cuisineType=${cuisineTypeLabel}&cuisineType=${cuisineTypeLabel}&mealType=${mealTypeLabel}&diet=${dietLabel}&calories=${minCal}-${maxCal}`
   
 
   const getRecipeInfo = async () => {
-    calories()
+
     const result = await axios.get(url);
     setRecipes(result.data.hits);
   };
@@ -140,7 +151,7 @@ function Response(props) {
             options={healthOptions}
             placeholder={"restrictions..."}
             className="response__health__select"
-            isMulti
+            // isMulti
             name="particularités"
             onChange={handleHealthChange}
           />
