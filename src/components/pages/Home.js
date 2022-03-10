@@ -18,7 +18,7 @@ const Home = () => {
         <Link to="/questionnaire"><Logo /></Link>
       </div>
       <div className='creators'>
-        <p >SNCFooD by : Les 4 fantastiques Manon alias "Womanizer", Nolan, Anais et Nicolas</p>
+        <p >SNCFooD by : Les 4 fantastiques Manon, Anaïs, Nico et Nolan.</p>
       </div>
 
     </div>
