@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+* {
+    font-family: Outfit, "sans serif";
+}
+
+/* Variable couleur de police */
+:root {
+    --footerColor: rgba(224, 54, 24);
+    --logoColor: rgb(255, 255, 255);
+}
+
+/* Variable couleur de police */
+
+.bg-foot {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--footerColor)
+}
+
+
+.leftPart-li, .centerPart-li, .rightPart-li {
+    list-style: none;
+    color: white;
+    margin: 5% auto auto auto;
+    
+}
+
+/*Partie droite du footer  */
+.rightPart-h2, .centerPart-h2 {
+    color: white;
+    margin-top: 15%;
+}
+
+
+/*Partie droite du footer  */
+
+/*Partie central du footer  */
+.centerPart-li a, .rightPart-li a {
+    text-decoration: none;
+    color: white;
+    margin-right: 50Px;
+}
+
+.ancre {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: calc(35px/2);
+}
+
+.ancrage {
+    background-color: var(--footerColor);
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+}
+
+/*Partie central du footer  */
+
+
+
+
+/* Partie gauche du footer */
+.leftPart ul {
+    display: flex;
+    padding: 0px 0px 0px 0px;
+}
+
+.logoFooter{
+    height: 130px;
+    margin-top: 15%;
+}
+
+
+/*Partie gauche du footer  */
+
+@media screen and (max-width: 580px) {
+    .centerPart, .rightPart {
+        display: none;
+    }
+    .logo_sncfood_main{
+        width: 80%;
+        margin: auto;
+    }
+    .leftPart-li{
+        margin: auto;
+    }
+}
